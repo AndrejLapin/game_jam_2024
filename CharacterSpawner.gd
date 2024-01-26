@@ -1,5 +1,6 @@
-extends Node2D
+class_name CharacterSpawner extends Node2D
 
+@export var character_array: Array[PackedScene]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

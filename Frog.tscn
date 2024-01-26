@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0e11ay3scnfi"]
+
+[ext_resource type="Script" path="res://Frog.gd" id="1_2ofum"]
+[ext_resource type="Texture2D" uid="uid://crudiklkqtplw" path="res://icon.svg" id="2_ujx71"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8t5pr"]
+
+[node name="Frog" type="RigidBody2D"]
+script = ExtResource("1_2ofum")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(8.9407e-07, -1.90735e-06)
+scale = Vector2(0.21875, 0.15625)
+texture = ExtResource("2_ujx71")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_8t5pr")
