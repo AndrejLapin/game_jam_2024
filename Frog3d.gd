@@ -1,18 +1,19 @@
-extends RigidBody2D
+extends RigidBody3D
 
-const MOVESPEED = 300
-const JUMP_VELOCITY = -500
+const MOVESPEED = 10
+const JUMP_VELOCITY = 10
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
 	pass # Replace with function body.
 
 
 func _integrate_forces(state):
-	global_rotation = 0
-	#rotation_degree = 0
-
+	global_rotation.x = 0
+	global_rotation.y = 0
+	global_rotation.z = 0
+	global_position.z = 0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
@@ -23,8 +24,3 @@ func _physics_process(delta):
 		
 	if InputCollection.jump: # and is_on_floor():
 		linear_velocity.y = JUMP_VELOCITY
-	#else:
-		#linear_velocity.y += gravity * delta
-		
-	# move_and_collide()
-

@@ -1,4 +1,4 @@
-class_name InputCollection extends Node
+extends Node
 
 var horizontal_direction: float = 0
 var vertical_direction: float = 0
