@@ -19,12 +19,10 @@ func _integrate_forces(state):
 func _physics_process(delta):
 	$FloorCheck.global_transform.origin = global_transform.origin
 	
-	var is_touching_floor = $FloorCheck.is_colliding()
-	
-	if InputCollection.horizontal_direction != 0 and not is_touching_floor:
+	if InputCollection.horizontal_direction != 0:
 		linear_velocity.x = MOVESPEED * InputCollection.horizontal_direction
 	else:
 		linear_velocity.x = move_toward(linear_velocity.x, 0, MOVESPEED)
 		
-	if InputCollection.jump and is_touching_floor: # and is_on_floor():
+	if InputCollection.jump and $FloorCheck.is_colliding(): # and is_on_floor():
 		linear_velocity.y = JUMP_VELOCITY
