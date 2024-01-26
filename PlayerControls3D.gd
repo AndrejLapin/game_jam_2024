@@ -1,4 +1,4 @@
-class_name PlayerControls extends Node2D
+class_name PlayerControls3D extends Node3D
 
 var input_collection : InputCollection = InputCollection.new()
 
@@ -9,7 +9,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _physics_process(delta):
+func _process(delta):
 	# read input pass to child nodes
 	input_collection.horizontal_direction = Input.get_axis("move_left", "move_right")
 	input_collection.vertical_direction = Input.get_axis("move_up", "move_down")

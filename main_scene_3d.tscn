@@ -1,11 +1,20 @@
 [gd_scene load_steps=2 format=3 uid="uid://dklqn2bggagq5"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_womi4"]
+[ext_resource type="PackedScene" uid="uid://da3lrkegw163m" path="res://placeholder_body_3D.tscn" id="1_ld1lu"]
 
 [node name="mainScene3D" type="Node3D"]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("BoxMesh_womi4")
+[node name="PlacholderBody3D" parent="." instance=ExtResource("1_ld1lu")]
+transform = Transform3D(13.53, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, -2.115, 2.08165e-12)
+
+[node name="PlacholderBody3D2" parent="." instance=ExtResource("1_ld1lu")]
+transform = Transform3D(1, 0, 0, 0, 7.69, 0, 0, 0, 1, -6.018, 1.86, 2.08165e-12)
+
+[node name="PlacholderBody3D3" parent="." instance=ExtResource("1_ld1lu")]
+transform = Transform3D(1, 0, 0, 0, 7.69, 0, 0, 0, 1, 5.972, 1.86, 2.08165e-12)
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.56757, 4.86245)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.507072, 0.861904, 0, -0.861904, 0.507072, 0, 4.33822, 2.38266)
