@@ -14,7 +14,18 @@
 
 [sub_resource type="Environment" id="Environment_0cho6"]
 sdfgi_enabled = true
+sdfgi_bounce_feedback = 0.21
+sdfgi_min_cell_size = 0.0976563
 glow_enabled = true
+glow_intensity = 1.81
+glow_strength = 1.08
+fog_enabled = true
+fog_light_color = Color(0.372549, 0.576471, 0.709804, 1)
+fog_density = 0.0616
+fog_sky_affect = 0.503
+volumetric_fog_density = 0.1026
+adjustment_enabled = true
+adjustment_contrast = 1.56
 
 [node name="mainScene3D" type="Node3D"]
 
