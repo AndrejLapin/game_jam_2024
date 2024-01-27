@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://u7nr0ddd667m"
-path="res://.godot/imported/Turd.glb-1452f7d5b04a08884ef4ce6a7fd7b44b.scn"
+uid="uid://cmuw3oo0fkgr2"
+path="res://.godot/imported/Char_Turd.glb-1ede5a3e3b3d852dc38668a824503a3e.scn"
 
 [deps]
 
-source_file="res://Frog/Turd.glb"
-dest_files=["res://.godot/imported/Turd.glb-1452f7d5b04a08884ef4ce6a7fd7b44b.scn"]
+source_file="res://Frog/Char_Turd.glb"
+dest_files=["res://.godot/imported/Char_Turd.glb-1ede5a3e3b3d852dc38668a824503a3e.scn"]
 
 [params]
 
