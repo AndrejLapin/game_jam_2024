@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://dklqn2bggagq5"]
+[gd_scene load_steps=9 format=3 uid="uid://dklqn2bggagq5"]
 
 [ext_resource type="PackedScene" uid="uid://da3lrkegw163m" path="res://placeholder_body_3D.tscn" id="1_ld1lu"]
+[ext_resource type="PackedScene" uid="uid://caoyb2ucq4r4w" path="res://Frog3d.tscn" id="3_kyquj"]
 [ext_resource type="PackedScene" uid="uid://gvq4c3q3vg6g" path="res://character_spawner_3d.tscn" id="4_7jd3q"]
 [ext_resource type="PackedScene" uid="uid://d0r6ijqlpc7d1" path="res://gameplay.tscn" id="4_b0oa5"]
 [ext_resource type="PackedScene" uid="uid://bvc0yddh1rhhk" path="res://LevelBlocks/level_block_01.tscn" id="5_72y60"]
@@ -21,6 +22,9 @@ current = true
 
 [node name="CharacterSpawner3D" parent="World" instance=ExtResource("4_7jd3q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.30873, 0)
+
+[node name="Frog3d" parent="World/CharacterSpawner3D" instance=ExtResource("3_kyquj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.52066, -4.82745, 0)
 
 [node name="Floor" parent="World" instance=ExtResource("1_ld1lu")]
 transform = Transform3D(14, 0, 0, 0, 1, 0, 0, 0, 3.08, 2.08165e-12, -0.65256, 2.08165e-12)
