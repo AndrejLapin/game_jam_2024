@@ -27,5 +27,5 @@ transform = Transform3D(0.98, 0, 0, 0, 0.6, 0, 0, 0, 0.98, 7.369, 1.08829, 2.081
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0454102, -0.119614, 0.177597)
 shape = SubResource("BoxShape3D_uahir")
 
-[node name="Node3D" parent="." instance=ExtResource("3_3qa0p")]
+[node name="Rotating_Platform" parent="." instance=ExtResource("3_3qa0p")]
 transform = Transform3D(0.98, 0, 0, 0, 0.6, 0, 0, 0, 0.98, 0, 1.21386, 0)
