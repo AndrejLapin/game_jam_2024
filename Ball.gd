@@ -1,7 +1,8 @@
 extends RigidBody3D
 
-const MOVESPEED = 7
-const JUMP_VELOCITY = 5
+const MOVESPEED = 15
+const JUMP_VELOCITY = 7
+const FRICTION = 0.5
 
 
 # Called when the node enters the scene tree for the first time.
@@ -21,9 +22,11 @@ func _physics_process(delta):
 	$FloorCheck.global_transform.origin = global_transform.origin
 	
 	if InputCollection.horizontal_direction != 0:
-		linear_velocity.x = MOVESPEED * InputCollection.horizontal_direction
+		angular_velocity.z += -MOVESPEED * InputCollection.horizontal_direction * delta
 	else:
-		linear_velocity.x = move_toward(linear_velocity.x, 0, MOVESPEED)
+		angular_velocity.z = move_toward(angular_velocity.z, 0, delta*MOVESPEED*2)
 		
 	if InputCollection.jump and $FloorCheck.is_colliding(): # and is_on_floor():
 		linear_velocity.y = JUMP_VELOCITY
+	
+	#linear_velocity.x = lerp(linear_velocity.x, 0.0, FRICTION)
