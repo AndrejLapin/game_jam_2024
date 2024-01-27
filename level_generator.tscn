@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgdfl1j27rxvo"]
+
+[ext_resource type="Script" path="res://LevelGenerator.gd" id="1_lsqbs"]
+[ext_resource type="PackedScene" uid="uid://cym766ppkctgy" path="res://LevelBlocks/default_level_block.tscn" id="2_v3nog"]
+
+[node name="LevelGenerator" type="Node3D"]
+script = ExtResource("1_lsqbs")
+spawer_entries = Array[PackedScene]([ExtResource("2_v3nog")])

@@ -1,24 +1,26 @@
-[gd_scene load_steps=3 format=3 uid="uid://cym766ppkctgy"]
+[gd_scene load_steps=4 format=3 uid="uid://cym766ppkctgy"]
 
+[ext_resource type="Script" path="res://LevelBlocks/default_level_block.gd" id="1_2j72n"]
 [ext_resource type="PackedScene" uid="uid://8m0dd6u3ibk3" path="res://LevelAssets/Default_BG.glb" id="1_bvbck"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_uahir"]
 size = Vector3(0.90918, 3.83878, 2.56497)
 
 [node name="LevelBlock" type="Node3D"]
+script = ExtResource("1_2j72n")
 
 [node name="Default_BG" parent="." instance=ExtResource("1_bvbck")]
-transform = Transform3D(-4.28372e-08, -3.41811e-16, -0.98, 3.41811e-16, 0.98, -3.41811e-16, 0.98, -3.41811e-16, -4.28372e-08, 0, 0, 0)
+transform = Transform3D(-4.28372e-08, -2.09272e-16, -0.98, 3.41811e-16, 0.6, -3.41811e-16, 0.98, -2.09272e-16, -4.28372e-08, 0, 0, 0)
 
 [node name="Left" type="StaticBody3D" parent="."]
-transform = Transform3D(0.98, 0, 0, 0, 0.98, 0, 0, 0, 0.98, -7.28303, 1.80246, 0)
+transform = Transform3D(0.98, 0, 0, 0, 0.6, 0, 0, 0, 0.98, -7.28303, 1.07406, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Left"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0454102, -0.119614, 0.177597)
 shape = SubResource("BoxShape3D_uahir")
 
 [node name="Right" type="StaticBody3D" parent="."]
-transform = Transform3D(0.98, 0, 0, 0, 0.98, 0, 0, 0, 0.98, 7.36886, 1.80246, 0)
+transform = Transform3D(0.98, 0, 0, 0, 0.6, 0, 0, 0, 0.98, 7.369, 1.08829, 2.08165e-12)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Right"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0454102, -0.119614, 0.177597)
