@@ -3,7 +3,7 @@ extends RigidBody3D
 const MOVESPEED = 6.0
 const JUMP_VELOCITY = 7.0
 const MAX_HOLD_JUMP = 0.6
-const SPAWN_WEIGHT = 1.0
+const SPAWN_WEIGHT = 1.1
 
 var jump_held_time = 0.0
 
