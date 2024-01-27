@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://cedg308wgybcl"]
+
+[ext_resource type="Script" path="res://lava.gd" id="1_prxlt"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yj2jv"]
+size = Vector3(20, 20, 20)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xh8ww"]
+albedo_color = Color(0.968627, 0.596078, 0.305882, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_i6mit"]
+material = SubResource("StandardMaterial3D_xh8ww")
+size = Vector3(20, 1, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6xpje"]
+size = Vector3(20, 1, 20)
+
+[node name="Lava" type="Node3D"]
+script = ExtResource("1_prxlt")
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.221595, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.51109, 0)
+shape = SubResource("BoxShape3D_yj2jv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_i6mit")
+
+[node name="KillBarrier" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -20.3885, 0)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="KillBarrier"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.221595, 0)
+shape = SubResource("BoxShape3D_6xpje")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]
+[connection signal="body_entered" from="KillBarrier" to="." method="_on_kill_barrier_body_entered"]

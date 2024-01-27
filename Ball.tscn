@@ -1,18 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://cqeokstaovbyl"]
+[gd_scene load_steps=6 format=3 uid="uid://cqeokstaovbyl"]
 
 [ext_resource type="Script" path="res://Ball.gd" id="1_itunx"]
 [ext_resource type="PackedScene" uid="uid://du30gva1t1gov" path="res://Frog/Char_Dounut.glb" id="2_dom6n"]
+[ext_resource type="PackedScene" uid="uid://dqocrbkse845l" path="res://lava_handler.tscn" id="3_0qiel"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_r0a7n"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_a8g53"]
+radius = 1.21186
 
 [node name="Ball" type="RigidBody3D"]
 physics_material_override = SubResource("PhysicsMaterial_r0a7n")
 script = ExtResource("1_itunx")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1.20755e-15, 8.74228e-09, 0.68, 0.632, -8.74228e-09, 6.78859e-21, 2.76256e-08, 0.2, -2.97237e-08, 0, 0, 0)
+transform = Transform3D(4.7767e-16, 1.09278e-08, 0.25, 0.25, -1.09278e-08, 1.44313e-21, 1.09278e-08, 0.25, -1.09278e-08, 0, 0, 0)
 shape = SubResource("CylinderShape3D_a8g53")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
@@ -27,3 +29,5 @@ transform = Transform3D(4.76995e-09, 0, -0.4, 0, 0.4, 0, 0.4, 0, 4.76995e-09, 0,
 [node name="FloorCheck" type="RayCast3D" parent="."]
 transform = Transform3D(1.07668, 0, 0, 0, 1.25124, 0, 0, 0, 1.07668, 0, 0, 0)
 target_position = Vector3(0, -0.33, 0)
+
+[node name="LavaHandler" parent="." instance=ExtResource("3_0qiel")]

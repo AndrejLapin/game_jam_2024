@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://caoyb2ucq4r4w"]
+[gd_scene load_steps=6 format=3 uid="uid://caoyb2ucq4r4w"]
 
 [ext_resource type="Script" path="res://Frog3d.gd" id="1_6atwt"]
 [ext_resource type="PackedScene" uid="uid://dwxgjsgl675tw" path="res://Frog/Frog_Char.glb" id="2_bylw7"]
+[ext_resource type="PackedScene" uid="uid://dqocrbkse845l" path="res://lava_handler.tscn" id="3_872j6"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_mhx5t"]
 bounce = 0.3
@@ -23,3 +24,5 @@ transform = Transform3D(-1.09278e-08, -8.71967e-17, -0.25, 8.71967e-17, 0.25, -8
 
 [node name="FloorCheck" type="RayCast3D" parent="."]
 target_position = Vector3(2.08165e-12, -0.22, 2.08165e-12)
+
+[node name="LavaHandler" parent="." instance=ExtResource("3_872j6")]

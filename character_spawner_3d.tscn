@@ -16,3 +16,5 @@ spawer_entries = Array[PackedScene]([ExtResource("2_cgyu8"), ExtResource("3_jwj1
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("BoxShape3D_wc6yi")
+
+[node name="CharacterGroup" type="Node3D" parent="."]
