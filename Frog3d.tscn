@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://caoyb2ucq4r4w"]
+[gd_scene load_steps=6 format=3 uid="uid://caoyb2ucq4r4w"]
 
 [ext_resource type="Script" path="res://Frog3d.gd" id="1_6atwt"]
-[ext_resource type="PackedScene" uid="uid://dt1t1mptccy03" path="res://Frog/FrogTongue.tscn" id="2_5bvdh"]
 [ext_resource type="PackedScene" uid="uid://dwxgjsgl675tw" path="res://Frog/Frog_Char.glb" id="2_bylw7"]
 [ext_resource type="PackedScene" path="res://lava_handler.tscn" id="3_872j6"]
 
@@ -15,14 +14,13 @@ height = 1.80555
 [node name="Frog3d" type="RigidBody3D"]
 physics_material_override = SubResource("PhysicsMaterial_mhx5t")
 script = ExtResource("1_6atwt")
-tongue_mesh = ExtResource("2_5bvdh")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(-1.09278e-08, -0.25, 8.71967e-17, 0.25, -1.09278e-08, -8.71967e-17, 8.71967e-17, 8.71967e-17, 0.25, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_ioayv")
 
 [node name="Frog_Char" parent="." instance=ExtResource("2_bylw7")]
-transform = Transform3D(-1.09278e-08, -8.71967e-17, -0.25, 8.71967e-17, 0.25, -8.71967e-17, 0.25, -8.71967e-17, -1.09278e-08, 4.58956e-06, -0.033144, 3.50475e-05)
+transform = Transform3D(-1.09278e-08, -8.71967e-17, -0.25, 8.71967e-17, 0.25, -8.71967e-17, 0.25, -8.71967e-17, -1.09278e-08, 0, -0.0319701, 0)
 
 [node name="FloorCheck" type="RayCast3D" parent="."]
 target_position = Vector3(2.08165e-12, -0.22, 2.08165e-12)

@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bvc0yddh1rhhk"]
+[gd_scene load_steps=6 format=3 uid="uid://bvc0yddh1rhhk"]
 
 [ext_resource type="Script" path="res://LevelBlocks/default_level_block.gd" id="1_vdmms"]
 [ext_resource type="PackedScene" uid="uid://8m0dd6u3ibk3" path="res://LevelAssets/Default_BG.glb" id="2_4j8p0"]
 [ext_resource type="PackedScene" uid="uid://blkv56c0btfe5" path="res://LevelAssets/Rotating_Platform.tscn" id="3_3qa0p"]
+[ext_resource type="PackedScene" uid="uid://bxwetj3bxdr23" path="res://LevelAssets/Platform.tscn" id="4_6ujpv"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_uahir"]
 size = Vector3(0.90918, 3.83878, 2.56497)
@@ -30,3 +31,9 @@ shape = SubResource("BoxShape3D_uahir")
 
 [node name="Rotating_Platform" parent="." instance=ExtResource("3_3qa0p")]
 transform = Transform3D(0.98, 0, 0, 0, 0.6, 0, 0, 0, 0.98, 0, 1.21386, 0)
+
+[node name="Rotatable_Platform" parent="." instance=ExtResource("4_6ujpv")]
+transform = Transform3D(2.56303, 0, 0, 0, 1, 0, 0, 0, 1, 5.3497, 0.199594, 0)
+
+[node name="Rotatable_Platform2" parent="." instance=ExtResource("4_6ujpv")]
+transform = Transform3D(4.02186, 0, 0, 0, 1, 0, 0, 0, 1, -4.44495, 0.199594, 0)

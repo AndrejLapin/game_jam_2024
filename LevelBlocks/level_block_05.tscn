@@ -14,19 +14,16 @@ script = ExtResource("1_2acin")
 transform = Transform3D(-4.28372e-08, -2.09272e-16, -0.98, 3.41811e-16, 0.6, -3.41811e-16, 0.98, -2.09272e-16, -4.28372e-08, 0, 0, 0)
 
 [node name="Rotatable_Platform" parent="." instance=ExtResource("3_ienex")]
-transform = Transform3D(3, 0, 0, 0, 0.841, 0, 0, 0, 0.841, -2.12409, 0.129026, 0)
+transform = Transform3D(3, 0, 0, 0, 0.841, 0, 0, 0, 0.841, -2.124, 0.9, 0)
 
 [node name="Rotatable_Platform4" parent="." instance=ExtResource("3_ienex")]
-transform = Transform3D(3, 0, 0, 0, 0.879, 0, 0, 0, 0.879, 2.79666, 0.129026, 0)
-
-[node name="Rotatable_Platform2" parent="." instance=ExtResource("3_ienex")]
-transform = Transform3D(1.60062, 0, 0, 0, 1, 0, 0, 0, 1, 0.495383, 0.48194, 0)
+transform = Transform3D(3, 0, 0, 0, 0.879, 0, 0, 0, 0.879, 2.797, 0.9, 0)
 
 [node name="Rotatable_Platform3" parent="." instance=ExtResource("3_ienex")]
 transform = Transform3D(1.01551, 0, 0, 0, 1, 0, 0, 0, 1, -6.23293, 0.856553, 0)
 
-[node name="Rotatable_Platform5" parent="." instance=ExtResource("3_ienex")]
-transform = Transform3D(1.01551, 0, 0, 0, 1, 0, 0, 0, 1, 6.24217, 1.228, 0)
+[node name="Rotatable_Platform6" parent="." instance=ExtResource("3_ienex")]
+transform = Transform3D(2.06453, 0, 0, 0, 1, 0, 0, 0, 1, 5.524, 1.95221, 0)
 
 [node name="Left" type="StaticBody3D" parent="."]
 transform = Transform3D(0.98, 0, 0, 0, 0.6, 0, 0, 0, 0.98, -7.28303, 1.07406, 0)

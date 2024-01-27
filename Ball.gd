@@ -1,7 +1,7 @@
 extends RigidBody3D
 
 const MOVESPEED = 15
-const JUMP_VELOCITY = 30
+const JUMP_VELOCITY = 50
 const FRICTION = 0.5
 const SPAWN_WEIGHT = 1.0
 var started_jump = -1.0
