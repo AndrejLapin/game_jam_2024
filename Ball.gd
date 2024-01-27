@@ -1,6 +1,6 @@
 extends RigidBody3D
 
-const MOVESPEED = 5
+const MOVESPEED = 7
 const JUMP_VELOCITY = 5
 
 
@@ -14,6 +14,7 @@ func _integrate_forces(state):
 	global_rotation.y = 0
 	#global_rotation.z = 0
 	global_position.z = 0
+	$FloorCheck.global_rotation.z = 0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
