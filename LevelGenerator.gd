@@ -5,8 +5,9 @@ class_name LevelGenerator extends Node3D
 var rng = RandomNumberGenerator.new()
 var spawn_weight_total = 0.0
 var spawn_dictionary: Array[Dictionary]
-
 var current_height = 0.0
+
+@onready var parent: Node3D = get_parent()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -26,12 +27,25 @@ func _ready():
 			"height": height
 		})
 		level_block.queue_free()
-	generate_new_segments(5)
+	generate_new_segments(10)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if eliminate_first_segment():
+		generate_single_segment()
+	
+
+
+func eliminate_first_segment() -> bool:
+	var first_segment: Node3D = get_child(0)
+	if first_segment == null:
+		return false
+	if first_segment.position.y + parent.position.y < -8:
+		first_segment.queue_free()
+		return true
+	return false
+
 
 
 func generate_new_segments(count: int):
