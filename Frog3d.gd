@@ -11,6 +11,7 @@ const SPAWN_WEIGHT = 1.1
 var jump_held_time = 0.0
 var jump_strafe_velocity: float = 0.0
 var tongue_target: Vector2 = Vector2(0.0, 0.0)
+var previous_tongue: Node3D = null
 
 @onready var original_bounce: float = physics_material_override.bounce
 
@@ -32,15 +33,16 @@ func _physics_process(delta):
 	
 	var is_touching_floor = $FloorCheck.is_colliding()
 	
-	#if InputCollection.mouse_just_pressed:
-		#var world_pos = Vector2(global_position.x, global_position.y)
-		#var angle = world_pos.angle_to_point(InputCollection.mouse_position)
-		##print("World position: ", str(world_pos), " click position: ", str(InputCollection.mouse_position), " angle is: ", angle)
-		##print(angle)
-		#var tongue: Node3D = tongue_mesh.instantiate()
-		#tongue.rotation.z = rad_to_deg(-angle)
-		#tongue.scale.y = 1000
-		#add_child(tongue)
+	if InputCollection.mouse_just_pressed:
+		if previous_tongue != null:
+			previous_tongue.queue_free()
+		var world_pos = Vector2(global_position.x, global_position.y)
+		var angle = (world_pos - InputCollection.mouse_position).angle()
+		var tongue: Node3D = tongue_mesh.instantiate()
+		tongue.rotation.z = angle + deg_to_rad(90)
+		tongue.scale.y = 1000
+		previous_tongue = tongue
+		add_child(tongue)
 
 	if is_touching_floor:
 		if InputCollection.jump_held:

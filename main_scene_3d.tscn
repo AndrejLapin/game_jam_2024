@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dklqn2bggagq5"]
+[gd_scene load_steps=10 format=3 uid="uid://dklqn2bggagq5"]
 
 [ext_resource type="PackedScene" uid="uid://da3lrkegw163m" path="res://placeholder_body_3D.tscn" id="1_ld1lu"]
 [ext_resource type="PackedScene" uid="uid://caoyb2ucq4r4w" path="res://Frog3d.tscn" id="3_kyquj"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cedg308wgybcl" path="res://lava.tscn" id="5_rka6h"]
 [ext_resource type="PackedScene" uid="uid://dtusq2j5x12f1" path="res://LevelBlocks/level_block_02.tscn" id="6_3d6le"]
 [ext_resource type="PackedScene" uid="uid://bgdfl1j27rxvo" path="res://level_generator.tscn" id="6_p5q7d"]
+[ext_resource type="PackedScene" uid="uid://dvni01s8jdrwj" path="res://background_click.tscn" id="9_i1tqe"]
 
 [node name="mainScene3D" type="Node3D"]
 
@@ -22,9 +23,10 @@ current = true
 
 [node name="CharacterSpawner3D" parent="World" instance=ExtResource("4_7jd3q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.30873, 0)
+SPAWN_INTERVAL_PLACEHOLDER = 100.0
 
 [node name="Frog3d" parent="World/CharacterSpawner3D" instance=ExtResource("3_kyquj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.52066, -4.82745, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0476639, -3.5337, 0)
 
 [node name="Floor" parent="World" instance=ExtResource("1_ld1lu")]
 transform = Transform3D(14, 0, 0, 0, 1, 0, 0, 0, 3.08, 2.08165e-12, -0.65256, 2.08165e-12)
@@ -41,3 +43,6 @@ speed_up = 0.01
 
 [node name="Lava" parent="." instance=ExtResource("5_rka6h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0162, 0)
+
+[node name="BackgroundClick" parent="." instance=ExtResource("9_i1tqe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 1.80147)

@@ -1,8 +1,7 @@
 class_name CharacterSpawner extends Node3D
 
 
-const SPAWN_INTERVAL_PLACEHOLDER = 5.0
-
+@export var SPAWN_INTERVAL_PLACEHOLDER = 5.0
 @export var spawer_entries: Array[PackedScene]
 
 var rng = RandomNumberGenerator.new()
@@ -28,7 +27,7 @@ func _ready():
 			"weight": spawn_weight
 		})
 		char.queue_free()
-	generate_characters(5)
+	#generate_characters(5)
 
 
 func _physics_process(delta):

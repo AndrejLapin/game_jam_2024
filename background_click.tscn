@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvni01s8jdrwj"]
+
+[ext_resource type="Script" path="res://BackgroundCollisionCheck.gd" id="1_6473h"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3mg75"]
+size = Vector3(14.5378, 15.0203, 0.163208)
+
+[node name="BackgroundClick" type="Node3D"]
+script = ExtResource("1_6473h")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0428467, 0.293089, -0.0010376)
+shape = SubResource("BoxShape3D_3mg75")
+
+[connection signal="input_event" from="Area3D" to="." method="_on_area_3d_input_event"]
