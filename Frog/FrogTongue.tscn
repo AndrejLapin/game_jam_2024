@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dt1t1mptccy03"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ex1et"]
+albedo_color = Color(0.984314, 0.819608, 0.811765, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_a2bqa"]
+material = SubResource("StandardMaterial3D_ex1et")
+height = 1.27
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_owtns"]
+height = 1.29556
+
+[node name="FrogTongue" type="Node3D"]
+
+[node name="Tongue" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.04, 0, 0, 0, 0.04, 0, 0, 0, 0.04, 0, 0.0256345, 0)
+mesh = SubResource("CylinderMesh_a2bqa")
+
+[node name="Area3D" type="Area3D" parent="Tongue"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tongue/Area3D"]
+shape = SubResource("CylinderShape3D_owtns")
