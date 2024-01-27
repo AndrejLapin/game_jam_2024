@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://df3s4bskkox2"
-path="res://.godot/imported/Cake_Char.glb-aad8314e36df42ebb86898d928d5309b.scn"
+uid="uid://dlo6ww1lqqicd"
+path="res://.godot/imported/Eye_Left.glb-b7084ea15d864ecdab02bfd69d5cce7b.scn"
 
 [deps]
 
-source_file="res://Frog/Cake_Char.glb"
-dest_files=["res://.godot/imported/Cake_Char.glb-aad8314e36df42ebb86898d928d5309b.scn"]
+source_file="res://Frog/Eye_Left.glb"
+dest_files=["res://.godot/imported/Eye_Left.glb-b7084ea15d864ecdab02bfd69d5cce7b.scn"]
 
 [params]
 
