@@ -10,7 +10,6 @@ var elapsed_spawn_time = 0.0
 var spawn_weight_total = 0.0
 var spawn_dictionary: Array[Dictionary]
 
-@onready var parent: Node = get_parent()
 @onready var half_length: float = (get_node("Area3D/CollisionShape3D").shape.size.x / 2)
 
 # Called when the node enters the scene tree for the first time.
@@ -27,24 +26,34 @@ func _ready():
 			"weight": spawn_weight
 		})
 		char.queue_free()
+	generate_characters(5)
 
 
 func _physics_process(delta):
 	elapsed_spawn_time += delta
 	if elapsed_spawn_time >= SPAWN_INTERVAL_PLACEHOLDER:
+		generate_character()
 		elapsed_spawn_time = 0
-		var random_number = rng.randf_range(0, spawn_weight_total)
-		var random_position = rng.randf_range(-half_length, half_length)
-		
-		var index: int = 0
-		while random_number > 0:
-			var entry = spawn_dictionary[index]
-			random_number -= entry.weight
-			if random_number <= 0:
-				var characterTemp: Node3D = entry.character.instantiate()
-				characterTemp.position.x = random_position
-				characterTemp.position.y = position.y
-				parent.add_child(characterTemp)
-				return
-			index += 1
 	pass
+
+
+func generate_characters(count: int):
+	for n in count:
+		generate_character()
+
+
+func generate_character():
+	var random_number = rng.randf_range(0, spawn_weight_total)
+	var random_position = rng.randf_range(-half_length, half_length)
+	
+	var index: int = 0
+	while random_number > 0:
+		var entry = spawn_dictionary[index]
+		random_number -= entry.weight
+		if random_number <= 0:
+			var characterTemp: Node3D = entry.character.instantiate()
+			characterTemp.position.x = random_position
+			characterTemp.position.y = position.y
+			add_child(characterTemp)
+			return
+		index += 1
