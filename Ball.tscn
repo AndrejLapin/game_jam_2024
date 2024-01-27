@@ -1,18 +1,16 @@
 [gd_scene load_steps=4 format=3 uid="uid://cqeokstaovbyl"]
 
-[ext_resource type="Script" path="res://Poop.gd" id="1_ryhfq"]
+[ext_resource type="Script" path="res://Ball.gd" id="1_itunx"]
 [ext_resource type="PackedScene" uid="uid://dwxgjsgl675tw" path="res://Frog/Frog_Char.glb" id="2_k3264"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ioayv"]
-radius = 0.723134
-height = 1.80555
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_a8g53"]
 
-[node name="Poop" type="RigidBody3D"]
-script = ExtResource("1_ryhfq")
+[node name="Ball" type="RigidBody3D"]
+script = ExtResource("1_itunx")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(-1.09278e-08, -0.25, 8.71967e-17, 0.25, -1.09278e-08, -8.71967e-17, 8.71967e-17, 8.71967e-17, 0.25, 0, 0, 0)
-shape = SubResource("CapsuleShape3D_ioayv")
+transform = Transform3D(7.53623e-16, 1.13091e-08, 0.424113, 0.394426, -1.13091e-08, 1.11823e-22, 1.72409e-08, 0.258721, -1.85386e-08, 0, 0, 0)
+shape = SubResource("CylinderShape3D_a8g53")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
