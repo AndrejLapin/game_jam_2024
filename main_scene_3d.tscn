@@ -1,22 +1,34 @@
-[gd_scene load_steps=4 format=3 uid="uid://dklqn2bggagq5"]
+[gd_scene load_steps=6 format=3 uid="uid://dklqn2bggagq5"]
 
 [ext_resource type="PackedScene" uid="uid://da3lrkegw163m" path="res://placeholder_body_3D.tscn" id="1_ld1lu"]
 [ext_resource type="PackedScene" uid="uid://gvq4c3q3vg6g" path="res://character_spawner_3d.tscn" id="4_7jd3q"]
+[ext_resource type="PackedScene" uid="uid://d0r6ijqlpc7d1" path="res://gameplay.tscn" id="4_b0oa5"]
+[ext_resource type="PackedScene" uid="uid://cedg308wgybcl" path="res://lava.tscn" id="5_rka6h"]
 [ext_resource type="PackedScene" uid="uid://bgdfl1j27rxvo" path="res://level_generator.tscn" id="6_p5q7d"]
 
 [node name="mainScene3D" type="Node3D"]
 
-[node name="Floor" parent="." instance=ExtResource("1_ld1lu")]
-transform = Transform3D(14, 0, 0, 0, 1, 0, 0, 0, 3.08, 2.08165e-12, -0.65256, 2.08165e-12)
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 3.138, 4.862)
-current = true
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.507072, 0.861904, 0, -0.861904, 0.507072, 0, 4.33822, 2.38266)
 
-[node name="CharacterSpawner3D" parent="." instance=ExtResource("4_7jd3q")]
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1.21673, 4.862)
+current = true
+
+[node name="World" type="Node3D" parent="."]
+
+[node name="CharacterSpawner3D" parent="World" instance=ExtResource("4_7jd3q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.30873, 0)
 
-[node name="LevelGenerator" parent="." instance=ExtResource("6_p5q7d")]
+[node name="Floor" parent="World" instance=ExtResource("1_ld1lu")]
+transform = Transform3D(14, 0, 0, 0, 1, 0, 0, 0, 3.08, 2.08165e-12, -0.65256, 2.08165e-12)
+
+[node name="LevelGenerator" parent="World" instance=ExtResource("6_p5q7d")]
+
+[node name="Gameplay" parent="World" node_paths=PackedStringArray("world", "character_spawner", "temp_objects") instance=ExtResource("4_b0oa5")]
+world = NodePath("..")
+character_spawner = NodePath("../CharacterSpawner3D")
+temp_objects = [NodePath("../Floor")]
+
+[node name="Lava" parent="." instance=ExtResource("5_rka6h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0162, 0)

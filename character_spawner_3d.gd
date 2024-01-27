@@ -11,9 +11,11 @@ var spawn_weight_total = 0.0
 var spawn_dictionary: Array[Dictionary]
 
 @onready var half_length: float = (get_node("Area3D/CollisionShape3D").shape.size.x / 2)
+@onready var character_group = get_node("CharacterGroup")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	character_group.set_as_top_level(true)
 	# calculate total weights
 	for entry in spawer_entries:
 		var spawn_weight = 1.0
@@ -54,6 +56,6 @@ func generate_character():
 			var characterTemp: Node3D = entry.character.instantiate()
 			characterTemp.position.x = random_position
 			characterTemp.position.y = position.y
-			add_child(characterTemp)
+			character_group.add_child(characterTemp)
 			return
 		index += 1

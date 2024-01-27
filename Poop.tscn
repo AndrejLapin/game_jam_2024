@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://be77nrksffv8q"]
+[gd_scene load_steps=5 format=3 uid="uid://be77nrksffv8q"]
 
 [ext_resource type="Script" path="res://Poop.gd" id="1_i0we8"]
 [ext_resource type="PackedScene" uid="uid://cmuw3oo0fkgr2" path="res://Frog/Char_Turd.glb" id="2_7ijbd"]
+[ext_resource type="PackedScene" uid="uid://dqocrbkse845l" path="res://lava_handler.tscn" id="3_lj0hv"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ioayv"]
 radius = 0.723134
@@ -19,3 +20,5 @@ target_position = Vector3(2.08165e-12, -0.22, 2.08165e-12)
 
 [node name="Char_Turd2" parent="." instance=ExtResource("2_7ijbd")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+
+[node name="LavaHandler" parent="." instance=ExtResource("3_lj0hv")]
