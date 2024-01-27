@@ -1,20 +1,23 @@
-[gd_scene load_steps=5 format=3 uid="uid://dklqn2bggagq5"]
+[gd_scene load_steps=6 format=3 uid="uid://dklqn2bggagq5"]
 
 [ext_resource type="PackedScene" uid="uid://da3lrkegw163m" path="res://placeholder_body_3D.tscn" id="1_ld1lu"]
 [ext_resource type="PackedScene" uid="uid://caoyb2ucq4r4w" path="res://Frog3d.tscn" id="3_kyquj"]
 [ext_resource type="PackedScene" uid="uid://be77nrksffv8q" path="res://Poop.tscn" id="3_pnakv"]
 [ext_resource type="PackedScene" uid="uid://gvq4c3q3vg6g" path="res://character_spawner_3d.tscn" id="4_7jd3q"]
+[ext_resource type="PackedScene" uid="uid://cym766ppkctgy" path="res://LevelBlocks/default_level_block.tscn" id="5_6stgp"]
 
 [node name="mainScene3D" type="Node3D"]
 
-[node name="PlacholderBody3D" parent="." instance=ExtResource("1_ld1lu")]
-transform = Transform3D(13.53, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, -2.115, 2.08165e-12)
+[node name="Floor" parent="." instance=ExtResource("1_ld1lu")]
+transform = Transform3D(14, 0, 0, 0, 1, 0, 0, 0, 3.08, 2.08165e-12, -2.115, 2.08165e-12)
 
 [node name="PlacholderBody3D2" parent="." instance=ExtResource("1_ld1lu")]
 transform = Transform3D(1, 0, 0, 0, 7.69, 0, 0, 0, 1, -6.018, 1.86, 2.08165e-12)
+visible = false
 
 [node name="PlacholderBody3D3" parent="." instance=ExtResource("1_ld1lu")]
 transform = Transform3D(1, 0, 0, 0, 7.69, 0, 0, 0, 1, 5.972, 1.86, 2.08165e-12)
+visible = false
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.56757, 4.86245)
@@ -38,3 +41,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.91673, 1.33811, 0)
 
 [node name="CharacterSpawner3D" parent="." instance=ExtResource("4_7jd3q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.30873, 0)
+
+[node name="LevelBlock" parent="." instance=ExtResource("5_6stgp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.36329, 0)
