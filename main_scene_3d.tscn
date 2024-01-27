@@ -1,11 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://dklqn2bggagq5"]
+[gd_scene load_steps=10 format=3 uid="uid://dklqn2bggagq5"]
 
-[ext_resource type="PackedScene" uid="uid://dqr8mufb1x01h" path="res://placeholder_body_3D.tscn" id="1_ld1lu"]
+[ext_resource type="PackedScene" uid="uid://da3lrkegw163m" path="res://placeholder_body_3D.tscn" id="1_ld1lu"]
+[ext_resource type="PackedScene" uid="uid://d1rov10qxxffg" path="res://LevelAssets/Default_BGFloor.glb" id="3_5l7bu"]
 [ext_resource type="PackedScene" uid="uid://gvq4c3q3vg6g" path="res://character_spawner_3d.tscn" id="4_7jd3q"]
-[ext_resource type="PackedScene" uid="uid://d0r6ijqlpc7d1" path="res://gameplay.tscn" id="4_b0oa5"]
-[ext_resource type="PackedScene" uid="uid://br10cjqeshng8" path="res://LevelBlocks/level_block_01.tscn" id="5_72y60"]
-[ext_resource type="PackedScene" uid="uid://cedg308wgybcl" path="res://lava.tscn" id="5_rka6h"]
-[ext_resource type="PackedScene" uid="uid://bruqktkesenmx" path="res://LevelBlocks/level_block_02.tscn" id="6_3d6le"]
+[ext_resource type="PackedScene" path="res://gameplay.tscn" id="4_b0oa5"]
+[ext_resource type="PackedScene" uid="uid://bvc0yddh1rhhk" path="res://LevelBlocks/level_block_01.tscn" id="5_72y60"]
+[ext_resource type="PackedScene" uid="uid://clh0b5p3q5vfv" path="res://lava.tscn" id="5_rka6h"]
+[ext_resource type="PackedScene" uid="uid://dtusq2j5x12f1" path="res://LevelBlocks/level_block_02.tscn" id="6_3d6le"]
 [ext_resource type="PackedScene" path="res://level_generator.tscn" id="6_p5q7d"]
 
 [sub_resource type="Environment" id="Environment_0cho6"]
@@ -28,7 +29,10 @@ current = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.30873, 0)
 
 [node name="Floor" parent="World" instance=ExtResource("1_ld1lu")]
-transform = Transform3D(14, 0, 0, 0, 1, 0, 0, 0, 3.08, 2.08165e-12, -0.65256, 2.08165e-12)
+transform = Transform3D(14, 0, 0, 0, 1, 0, 0, 0, 3.08, 2.08165e-12, 0.539077, 2.08165e-12)
+
+[node name="Default_BGFloor" parent="World/Floor" instance=ExtResource("3_5l7bu")]
+transform = Transform3D(-1.90373e-08, 0, 0.11685, 0, 1.6359, 0, -0.531137, 0, -8.65332e-08, 0, 0.499053, 0.0706375)
 
 [node name="LevelGenerator" parent="World" instance=ExtResource("6_p5q7d")]
 spawer_entries = Array[PackedScene]([ExtResource("5_72y60"), ExtResource("6_3d6le")])
@@ -36,7 +40,6 @@ spawer_entries = Array[PackedScene]([ExtResource("5_72y60"), ExtResource("6_3d6l
 [node name="Gameplay" parent="World" node_paths=PackedStringArray("world", "level_generator") instance=ExtResource("4_b0oa5")]
 world = NodePath("..")
 level_generator = NodePath("../LevelGenerator")
-play = false
 initial_speed = 0.01
 speed_up = 0.01
 
