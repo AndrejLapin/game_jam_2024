@@ -1,13 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://caoyb2ucq4r4w"]
+[gd_scene load_steps=5 format=3 uid="uid://caoyb2ucq4r4w"]
 
 [ext_resource type="Script" path="res://Frog3d.gd" id="1_6atwt"]
 [ext_resource type="PackedScene" uid="uid://dwxgjsgl675tw" path="res://Frog/Frog_Char.glb" id="2_bylw7"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_mhx5t"]
+bounce = 0.3
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ioayv"]
 radius = 0.723134
 height = 1.80555
 
 [node name="Frog3d" type="RigidBody3D"]
+physics_material_override = SubResource("PhysicsMaterial_mhx5t")
 script = ExtResource("1_6atwt")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
