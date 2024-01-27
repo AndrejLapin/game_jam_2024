@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://caoyb2ucq4r4w" path="res://Frog3d.tscn" id="3_kyquj"]
 [ext_resource type="PackedScene" uid="uid://be77nrksffv8q" path="res://Poop.tscn" id="3_pnakv"]
 [ext_resource type="PackedScene" uid="uid://gvq4c3q3vg6g" path="res://character_spawner_3d.tscn" id="4_7jd3q"]
-[ext_resource type="PackedScene" uid="uid://cym766ppkctgy" path="res://LevelBlocks/default_level_block.tscn" id="5_6stgp"]
+[ext_resource type="PackedScene" uid="uid://cqeokstaovbyl" path="res://Ball.tscn" id="5_es755"]
 [ext_resource type="PackedScene" uid="uid://bgdfl1j27rxvo" path="res://level_generator.tscn" id="6_p5q7d"]
 
 [node name="mainScene3D" type="Node3D"]
@@ -14,6 +14,7 @@ transform = Transform3D(14, 0, 0, 0, 1, 0, 0, 0, 3.08, 2.08165e-12, -0.65256, 2.
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 3.138, 4.862)
+current = true
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.507072, 0.861904, 0, -0.861904, 0.507072, 0, 4.33822, 2.38266)
@@ -35,9 +36,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.91673, 2.78402, 0)
 
 [node name="CharacterSpawner3D" parent="." instance=ExtResource("4_7jd3q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.30873, 0)
-
-[node name="LevelBlock" parent="." instance=ExtResource("5_6stgp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
-visible = false
+spawer_entries = Array[PackedScene]([ExtResource("3_kyquj"), ExtResource("3_pnakv"), ExtResource("5_es755")])
 
 [node name="LevelGenerator" parent="." instance=ExtResource("6_p5q7d")]
