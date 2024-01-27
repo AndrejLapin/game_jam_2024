@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://dklqn2bggagq5"]
 
-[ext_resource type="PackedScene" path="res://placeholder_body_3D.tscn" id="1_ld1lu"]
+[ext_resource type="PackedScene" uid="uid://dqr8mufb1x01h" path="res://placeholder_body_3D.tscn" id="1_ld1lu"]
 [ext_resource type="PackedScene" uid="uid://gvq4c3q3vg6g" path="res://character_spawner_3d.tscn" id="4_7jd3q"]
 [ext_resource type="PackedScene" uid="uid://d0r6ijqlpc7d1" path="res://gameplay.tscn" id="4_b0oa5"]
 [ext_resource type="PackedScene" uid="uid://br10cjqeshng8" path="res://LevelBlocks/level_block_01.tscn" id="5_72y60"]
@@ -9,11 +9,14 @@
 [ext_resource type="PackedScene" path="res://level_generator.tscn" id="6_p5q7d"]
 
 [sub_resource type="Environment" id="Environment_0cho6"]
+sdfgi_enabled = true
+glow_enabled = true
 
 [node name="mainScene3D" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.507072, 0.861904, 0, -0.861904, 0.507072, 0, 4.33822, 2.38266)
+light_color = Color(0.14902, 0.552941, 0.933333, 1)
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1.21673, 4.862)
