@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dklqn2bggagq5"]
+[gd_scene load_steps=4 format=3 uid="uid://dklqn2bggagq5"]
 
 [ext_resource type="PackedScene" uid="uid://da3lrkegw163m" path="res://placeholder_body_3D.tscn" id="1_ld1lu"]
 [ext_resource type="PackedScene" uid="uid://caoyb2ucq4r4w" path="res://Frog3d.tscn" id="3_kyquj"]
+[ext_resource type="PackedScene" uid="uid://be77nrksffv8q" path="res://Poop.tscn" id="3_pnakv"]
 
 [node name="mainScene3D" type="Node3D"]
 
@@ -27,3 +28,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.72765, -0.7082, 4.76837e-0
 
 [node name="Frog3d3" parent="." instance=ExtResource("3_kyquj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.39104, -0.660078, 0)
+
+[node name="Poop" parent="." instance=ExtResource("3_pnakv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.02138, 1.26854, 0)
+
+[node name="Poop2" parent="." instance=ExtResource("3_pnakv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.91673, 1.33811, 0)

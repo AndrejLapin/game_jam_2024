@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://gvq4c3q3vg6g"]
+
+[ext_resource type="Script" path="res://character_spawner_3d.gd" id="1_rf65m"]
+[ext_resource type="PackedScene" uid="uid://caoyb2ucq4r4w" path="res://Frog3d.tscn" id="2_cgyu8"]
+[ext_resource type="PackedScene" uid="uid://be77nrksffv8q" path="res://Poop.tscn" id="3_jwj15"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wc6yi"]
+
+[node name="CharacterSpawner3D" type="Node3D"]
+script = ExtResource("1_rf65m")
+spawer_entries = Array[PackedScene]([ExtResource("2_cgyu8"), ExtResource("3_jwj15")])
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_wc6yi")
