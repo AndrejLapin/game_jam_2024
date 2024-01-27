@@ -10,7 +10,7 @@ func _ready():
 func _integrate_forces(state):
 	global_rotation.x = 0
 	global_rotation.y = 0
-	global_position = initial_position
+	position = initial_position
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):

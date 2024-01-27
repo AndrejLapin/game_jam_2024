@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://gvq4c3q3vg6g" path="res://character_spawner_3d.tscn" id="4_7jd3q"]
 [ext_resource type="PackedScene" uid="uid://d0r6ijqlpc7d1" path="res://gameplay.tscn" id="4_b0oa5"]
 [ext_resource type="PackedScene" uid="uid://cedg308wgybcl" path="res://lava.tscn" id="5_rka6h"]
-[ext_resource type="PackedScene" path="res://LevelBlocks/level_block_02.tscn" id="6_3d6le"]
+[ext_resource type="PackedScene" uid="uid://dtusq2j5x12f1" path="res://LevelBlocks/level_block_02.tscn" id="6_3d6le"]
 [ext_resource type="PackedScene" uid="uid://bgdfl1j27rxvo" path="res://level_generator.tscn" id="6_p5q7d"]
 
 [node name="mainScene3D" type="Node3D"]
@@ -30,6 +30,8 @@ spawer_entries = Array[PackedScene]([ExtResource("6_3d6le")])
 [node name="Gameplay" parent="World" node_paths=PackedStringArray("world", "level_generator") instance=ExtResource("4_b0oa5")]
 world = NodePath("..")
 level_generator = NodePath("../LevelGenerator")
+initial_speed = 0.01
+speed_up = 0.01
 
 [node name="Lava" parent="." instance=ExtResource("5_rka6h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0162, 0)
