@@ -1,15 +1,29 @@
-[gd_scene load_steps=4 format=3 uid="uid://cc68ulejxc1oc"]
+[gd_scene load_steps=4 format=3 uid="uid://lvgo5q4quoeq"]
 
-[ext_resource type="Script" path="res://CharacterSpawner.gd" id="1_hf3rk"]
-[ext_resource type="PackedScene" uid="uid://c0e11ay3scnfi" path="res://Frog.tscn" id="2_pg1al"]
+[ext_resource type="PackedScene" uid="uid://c0e11ay3scnfi" path="res://old/Frog.tscn" id="1_5gbij"]
+
+[sub_resource type="GDScript" id="GDScript_phebr"]
+script/source = "class_name CharacterSpawner extends Node2D
+
+@export var character_array: Array[PackedScene]
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jxs8m"]
 size = Vector2(1000, 20)
 
 [node name="CharacterSpawner" type="Node2D"]
 position = Vector2(960, 2.08165e-12)
-script = ExtResource("1_hf3rk")
-character_array = Array[PackedScene]([ExtResource("2_pg1al")])
+script = SubResource("GDScript_phebr")
+character_array = Array[PackedScene]([ExtResource("1_5gbij")])
 
 [node name="Area2D" type="Area2D" parent="."]
 

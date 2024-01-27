@@ -13,3 +13,10 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+
+
+func _physics_process(delta):
+	# read input pass to child nodes
+	horizontal_direction = Input.get_axis("move_left", "move_right")
+	vertical_direction = Input.get_axis("move_up", "move_down")
+	jump = Input.is_action_just_pressed("jump")

@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://dklqn2bggagq5"]
+[gd_scene load_steps=3 format=3 uid="uid://dklqn2bggagq5"]
 
 [ext_resource type="PackedScene" uid="uid://da3lrkegw163m" path="res://placeholder_body_3D.tscn" id="1_ld1lu"]
-[ext_resource type="PackedScene" uid="uid://dpj0ubb773h1e" path="res://PlayerControls3D.tscn" id="2_n6wwm"]
 [ext_resource type="PackedScene" uid="uid://caoyb2ucq4r4w" path="res://Frog3d.tscn" id="3_kyquj"]
 
 [node name="mainScene3D" type="Node3D"]
@@ -20,8 +19,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.56757, 4.86245)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.507072, 0.861904, 0, -0.861904, 0.507072, 0, 4.33822, 2.38266)
-
-[node name="Node3D" parent="." instance=ExtResource("2_n6wwm")]
 
 [node name="Frog3d" parent="." instance=ExtResource("3_kyquj")]
 
