@@ -22,6 +22,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0454102, -0.119614, 0.1775
 shape = SubResource("BoxShape3D_uahir")
 
 [node name="Rotatable_Platform" parent="." instance=ExtResource("3_kulcy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 1, 0)
+
+[node name="Rotatable_Platform3" parent="." instance=ExtResource("3_kulcy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00266278, 1, 0)
+
+[node name="Rotatable_Platform2" parent="." instance=ExtResource("3_kulcy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 1, 0)
 
 [node name="Right" type="StaticBody3D" parent="."]
 transform = Transform3D(0.98, 0, 0, 0, 0.6, 0, 0, 0, 0.98, 7.369, 1.08829, 2.08165e-12)

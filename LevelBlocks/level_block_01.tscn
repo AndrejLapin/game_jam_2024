@@ -30,10 +30,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0454102, -0.119614, 0.1775
 shape = SubResource("BoxShape3D_uahir")
 
 [node name="Rotating_Platform" parent="." instance=ExtResource("3_3qa0p")]
-transform = Transform3D(0.98, 0, 0, 0, 0.6, 0, 0, 0, 0.98, 0, 1.21386, 0)
+transform = Transform3D(0.98, 0, 0, 0, 0.6, 0, 0, 0, 0.98, -1.559, 1, 0)
+
+[node name="Rotating_Platform2" parent="." instance=ExtResource("3_3qa0p")]
+transform = Transform3D(0.98, 0, 0, 0, 0.6, 0, 0, 0, 0.98, 1.758, 1, 0)
 
 [node name="Rotatable_Platform" parent="." instance=ExtResource("4_6ujpv")]
-transform = Transform3D(2.56303, 0, 0, 0, 1, 0, 0, 0, 1, 5.3497, 0.199594, 0)
+transform = Transform3D(1.12253, 0, 0, 0, 1, 0, 0, 0, 1, 6.16988, 0.199594, 0)
 
 [node name="Rotatable_Platform2" parent="." instance=ExtResource("4_6ujpv")]
-transform = Transform3D(4.02186, 0, 0, 0, 1, 0, 0, 0, 1, -4.44495, 0.199594, 0)
+transform = Transform3D(2.0027, 0, 0, 0, 1.01235, 0, 0, 0, 1.01235, -5.55241, 0.199594, 0)

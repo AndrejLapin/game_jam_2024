@@ -1,6 +1,6 @@
 extends RigidBody3D
 
-const MOVESPEED = 15
+const MOVESPEED = 10
 const JUMP_VELOCITY = 50
 const FRICTION = 0.5
 const SPAWN_WEIGHT = 1.0
@@ -26,8 +26,10 @@ func _physics_process(delta):
 	
 	if InputCollection.horizontal_direction != 0:
 		angular_velocity.z += -MOVESPEED * InputCollection.horizontal_direction * delta
+		linear_velocity.x += MOVESPEED * InputCollection.horizontal_direction * delta
 	else:
 		angular_velocity.z = move_toward(angular_velocity.z, 0, delta*MOVESPEED*2)
+		linear_velocity.x = move_toward(linear_velocity.x, 0, delta*MOVESPEED*2)
 		
 		
 	if started_jump >0:
