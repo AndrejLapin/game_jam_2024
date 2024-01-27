@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://cedg308wgybcl"]
+[gd_scene load_steps=8 format=3 uid="uid://cedg308wgybcl"]
 
 [ext_resource type="Script" path="res://lava.gd" id="1_prxlt"]
+[ext_resource type="Texture2D" uid="uid://brgcirdamlr0x" path="res://LevelAssets/Lava_txt_color.png" id="2_nh6bx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yj2jv"]
 size = Vector3(20, 20, 20)
@@ -11,6 +12,12 @@ albedo_color = Color(0.968627, 0.596078, 0.305882, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_i6mit"]
 material = SubResource("StandardMaterial3D_xh8ww")
 size = Vector3(20, 1, 20)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_27igq"]
+albedo_texture = ExtResource("2_nh6bx")
+emission_enabled = true
+emission_texture = ExtResource("2_nh6bx")
+uv1_scale = Vector3(20.58, 20.58, 20.58)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6xpje"]
 size = Vector3(20, 1, 20)
@@ -27,6 +34,7 @@ shape = SubResource("BoxShape3D_yj2jv")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_i6mit")
+surface_material_override/0 = SubResource("StandardMaterial3D_27igq")
 
 [node name="KillBarrier" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -20.3885, 0)

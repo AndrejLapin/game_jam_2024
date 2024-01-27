@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dlo6ww1lqqicd"
-path="res://.godot/imported/Eye_Left.glb-b7084ea15d864ecdab02bfd69d5cce7b.scn"
+uid="uid://b3dik7awj0rbd"
+path="res://.godot/imported/Eye.glb-a5b2cd15137af3ff20ee8e80394470c0.scn"
 
 [deps]
 
-source_file="res://Frog/Eye_Left.glb"
-dest_files=["res://.godot/imported/Eye_Left.glb-b7084ea15d864ecdab02bfd69d5cce7b.scn"]
+source_file="res://Frog/Eye.glb"
+dest_files=["res://.godot/imported/Eye.glb-a5b2cd15137af3ff20ee8e80394470c0.scn"]
 
 [params]
 

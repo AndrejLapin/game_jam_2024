@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcq6sba1c0je1"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_suhhk"]
+radius = 0.035
+height = 0.075
+radial_segments = 4
+rings = 1
+
+[node name="Particles" type="Node3D"]
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="."]
+amount = 3
+lifetime = 1.86
+preprocess = 1.14
+mesh = SubResource("CapsuleMesh_suhhk")
+emission_colors = PackedColorArray(0.976471, 0.239216, 0.0117647, 1)
+direction = Vector3(0, 1, 0)
+spread = 12.27
+gravity = Vector3(0, -1.355, 0)
+initial_velocity_min = 0.9
+initial_velocity_max = 1.15
+color = Color(0.85098, 0, 0.0980392, 1)
