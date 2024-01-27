@@ -6,7 +6,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_vibwn"]
 size = Vector3(4.05, 0.56, 1.255)
 
-[node name="Node3D" type="Node3D"]
+[node name="Rotatable_Platform" type="Node3D"]
 
 [node name="RigidBody3D" type="RigidBody3D" parent="."]
 script = ExtResource("1_7jrsx")
