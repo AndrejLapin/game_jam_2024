@@ -9,7 +9,6 @@ size = Vector3(4.05, 0.56, 1.255)
 [node name="Rotatable_Platform" type="Node3D"]
 
 [node name="RigidBody3D" type="RigidBody3D" parent="."]
-mass = 150.0
 script = ExtResource("1_7jrsx")
 
 [node name="Rotating_Platform2" parent="RigidBody3D" instance=ExtResource("2_dp3y4")]

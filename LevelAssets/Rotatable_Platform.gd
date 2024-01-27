@@ -4,7 +4,7 @@ const ROTATION_SPEED = 0.5
 var rng = RandomNumberGenerator.new()
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	position.x = rng.randf_range(-5,5)
+	#position.x = rng.randf_range(-5,5)
 	initial_position = position
 
 func _integrate_forces(state):

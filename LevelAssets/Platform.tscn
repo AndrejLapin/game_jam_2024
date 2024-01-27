@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxwetj3bxdr23"]
+
+[ext_resource type="PackedScene" uid="uid://dkklwwaw548f7" path="res://LevelAssets/Default_Platform.glb" id="1_gv6ty"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vibwn"]
+size = Vector3(4.05, 0.56, 1.255)
+
+[node name="Rotatable_Platform" type="Node3D"]
+
+[node name="RigidBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(0.290418, 0, 0, 0, 0.599784, 0, 0, 0, 0.599784, 0, 0, 0)
+shape = SubResource("BoxShape3D_vibwn")
+
+[node name="Default_Platform2" parent="RigidBody3D" instance=ExtResource("1_gv6ty")]
+transform = Transform3D(-2.59565e-08, 0, 0.593814, 0, 0.593814, 0, -0.593814, 0, -2.59565e-08, 0, 0, 0)
