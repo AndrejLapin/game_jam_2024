@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dklqn2bggagq5"]
+[gd_scene load_steps=13 format=3 uid="uid://dklqn2bggagq5"]
 
 [ext_resource type="PackedScene" uid="uid://dqr8mufb1x01h" path="res://placeholder_body_3D.tscn" id="1_ld1lu"]
 [ext_resource type="PackedScene" uid="uid://d1rov10qxxffg" path="res://LevelAssets/Default_BGFloor.glb" id="3_5l7bu"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://dtusq2j5x12f1" path="res://LevelBlocks/level_block_02.tscn" id="6_3d6le"]
 [ext_resource type="PackedScene" uid="uid://bgdfl1j27rxvo" path="res://level_generator.tscn" id="6_p5q7d"]
 [ext_resource type="PackedScene" uid="uid://rndqmghkd7r8" path="res://LevelBlocks/level_block_03.tscn" id="7_mvyo5"]
+[ext_resource type="PackedScene" uid="uid://b6k57d8hpdkcr" path="res://LevelBlocks/level_block_04.tscn" id="8_nefas"]
+[ext_resource type="PackedScene" uid="uid://by7uv7daaqga2" path="res://LevelBlocks/level_block_05.tscn" id="9_x7udl"]
 
 [sub_resource type="Environment" id="Environment_0cho6"]
 sdfgi_enabled = true
@@ -36,7 +38,7 @@ transform = Transform3D(14, 0, 0, 0, 1, 0, 0, 0, 3.08, 2.08165e-12, 0.539077, 2.
 transform = Transform3D(-1.90373e-08, 0, 0.11685, 0, 1.6359, 0, -0.531137, 0, -8.65332e-08, 0, 0.499053, 0.0706375)
 
 [node name="LevelGenerator" parent="World" instance=ExtResource("6_p5q7d")]
-spawer_entries = Array[PackedScene]([ExtResource("5_72y60"), ExtResource("6_3d6le"), ExtResource("7_mvyo5")])
+spawer_entries = Array[PackedScene]([ExtResource("5_72y60"), ExtResource("6_3d6le"), ExtResource("7_mvyo5"), ExtResource("8_nefas"), ExtResource("9_x7udl")])
 
 [node name="Gameplay" parent="World" node_paths=PackedStringArray("world", "level_generator") instance=ExtResource("4_b0oa5")]
 world = NodePath("..")

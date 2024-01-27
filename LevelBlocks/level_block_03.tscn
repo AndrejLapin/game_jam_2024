@@ -14,10 +14,22 @@ script = ExtResource("1_da5kb")
 transform = Transform3D(-4.28372e-08, -2.09272e-16, -0.98, 3.41811e-16, 0.6, -3.41811e-16, 0.98, -2.09272e-16, -4.28372e-08, 0, 0, 0)
 
 [node name="Rotatable_Platform" parent="." instance=ExtResource("3_qu3h6")]
-transform = Transform3D(2.37406, 0, 0, 0, 1, 0, 0, 0, 1, -5.44861, 0.129026, 0)
+transform = Transform3D(2.37406, 0, 0, 0, 1, 0, 0, 0, 1, 5.42758, 0.129026, 0)
 
 [node name="Rotatable_Platform2" parent="." instance=ExtResource("3_qu3h6")]
-transform = Transform3D(2.37406, 0, 0, 0, 1, 0, 0, 0, 1, -5.44861, 0.48194, 0)
+transform = Transform3D(1.60062, 0, 0, 0, 1, 0, 0, 0, 1, 5.89544, 0.48194, 0)
+
+[node name="Rotatable_Platform4" parent="." instance=ExtResource("3_qu3h6")]
+transform = Transform3D(3.20375, 0, 0, 0, 1, 0, 0, 0, 1, -4.7943, 1.4574, 0)
+
+[node name="Rotatable_Platform5" parent="." instance=ExtResource("3_qu3h6")]
+transform = Transform3D(3.20375, 0, 0, 0, 1, 0, 0, 0, 1, -1.28011, 1.10041, 0)
+
+[node name="Rotatable_Platform6" parent="." instance=ExtResource("3_qu3h6")]
+transform = Transform3D(3.20375, 0, 0, 0, 1, 0, 0, 0, 1, 0.921368, 0.775751, 0)
+
+[node name="Rotatable_Platform3" parent="." instance=ExtResource("3_qu3h6")]
+transform = Transform3D(1.01551, 0, 0, 0, 1, 0, 0, 0, 1, 6.24503, 0.856553, 0)
 
 [node name="Left" type="StaticBody3D" parent="."]
 transform = Transform3D(0.98, 0, 0, 0, 0.6, 0, 0, 0, 0.98, -7.28303, 1.07406, 0)

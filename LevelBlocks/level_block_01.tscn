@@ -9,6 +9,7 @@ size = Vector3(0.90918, 3.83878, 2.56497)
 
 [node name="LevelBlock" type="Node3D"]
 script = ExtResource("1_vdmms")
+SPAWN_WEIGHT = 0.5
 
 [node name="Default_BG" parent="." instance=ExtResource("2_4j8p0")]
 transform = Transform3D(-4.28372e-08, -2.09272e-16, -0.98, 3.41811e-16, 0.6, -3.41811e-16, 0.98, -2.09272e-16, -4.28372e-08, 0, 0, 0)
