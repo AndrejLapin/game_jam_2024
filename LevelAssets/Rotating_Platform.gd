@@ -1,6 +1,6 @@
 extends StaticBody3D
 var initial_position
-const ROTATION_SPEED = 0.5
+const ROTATION_SPEED = 0.3
 var rng = RandomNumberGenerator.new()
 # Called when the node enters the scene tree for the first time.
 func _ready():
