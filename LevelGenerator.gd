@@ -1,6 +1,9 @@
 class_name LevelGenerator extends Node3D
 
+@export var default_block: PackedScene
 @export var spawer_entries: Array[PackedScene]
+
+const DEFAULT_HEIGHT = 2.25
 
 var rng = RandomNumberGenerator.new()
 var spawn_weight_total = 0.0
@@ -14,7 +17,7 @@ func _ready():
 	# calculate total weights
 	for entry in spawer_entries:
 		var spawn_weight = 1.0
-		var height = 2.25
+		var height = DEFAULT_HEIGHT
 		var level_block = entry.instantiate()
 		if "SPAWN_WEIGHT" in level_block:
 			spawn_weight = level_block.SPAWN_WEIGHT
@@ -27,7 +30,8 @@ func _ready():
 			"height": height
 		})
 		level_block.queue_free()
-	generate_new_segments(10)
+	generate_default_segment()
+	generate_new_segments(9)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -52,6 +56,13 @@ func generate_new_segments(count: int):
 	for n in count:
 		generate_single_segment()
 
+
+func generate_default_segment():
+	var level_block: Node3D = default_block.instantiate()
+	level_block.position.y = current_height
+	current_height += DEFAULT_HEIGHT
+	add_child(level_block)
+	
 
 func generate_single_segment():
 	var random_number = rng.randf_range(0, spawn_weight_total)
