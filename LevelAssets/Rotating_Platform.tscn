@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddxpheacecvkf"]
+
+[ext_resource type="Script" path="res://LevelAssets/Rotating_Platform.gd" id="1_w7gtq"]
+[ext_resource type="PackedScene" uid="uid://msdlbome2bpi" path="res://LevelAssets/Rotating_Platform.glb" id="2_bv8m8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vibwn"]
+size = Vector3(4.05, 0.56, 1.255)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+script = ExtResource("1_w7gtq")
+
+[node name="Rotating_Platform2" parent="StaticBody3D" instance=ExtResource("2_bv8m8")]
+transform = Transform3D(7.32128e-09, 0, -0.613949, 0, 0.613949, 0, 0.613949, 0, 7.32128e-09, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(0.599784, 0, 0, 0, 0.599784, 0, 0, 0, 0.599784, 0, 0, 0)
+shape = SubResource("BoxShape3D_vibwn")
