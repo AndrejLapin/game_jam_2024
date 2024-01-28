@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://dorad6mh8xltt"]
+
+[ext_resource type="Script" path="res://LevelBlocks/default_level_block.gd" id="1_dv650"]
+[ext_resource type="PackedScene" uid="uid://cfcpcmgsc7x5v" path="res://LevelBlocks/level_background.tscn" id="2_ukivo"]
+[ext_resource type="PackedScene" uid="uid://bxwetj3bxdr23" path="res://LevelAssets/Platform.tscn" id="3_2pl5x"]
+
+[node name="LevelBlock" type="Node3D"]
+script = ExtResource("1_dv650")
+
+[node name="LevelBlock" parent="." instance=ExtResource("2_ukivo")]
+
+[node name="Rotatable_Platform4" parent="." instance=ExtResource("3_2pl5x")]
+transform = Transform3D(1.5, 0, 0, 0, 0.879, 0, 0, 0, 0.879, 4.011, 1.6, 0)
+
+[node name="Rotatable_Platform6" parent="." instance=ExtResource("3_2pl5x")]
+transform = Transform3D(1.5, 0, 0, 0, 0.879, 0, 0, 0, 0.879, -0.0284896, 1.6, 0)
+
+[node name="Rotatable_Platform7" parent="." instance=ExtResource("3_2pl5x")]
+transform = Transform3D(1.5, 0, 0, 0, 0.879, 0, 0, 0, 0.879, -3.93293, 1.6, 0)
+
+[node name="Rotatable_Platform5" parent="." instance=ExtResource("3_2pl5x")]
+transform = Transform3D(1.5, 0, 0, 0, 1, 0, 0, 0, 1, 2.44061, 0.613974, 0)
+
+[node name="Rotatable_Platform8" parent="." instance=ExtResource("3_2pl5x")]
+transform = Transform3D(1.5, 0, 0, 0, 1, 0, 0, 0, 1, -1.9516, 0.613974, 0)

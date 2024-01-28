@@ -1,16 +1,18 @@
-[gd_scene load_steps=13 format=3 uid="uid://dklqn2bggagq5"]
+[gd_scene load_steps=15 format=3 uid="uid://dklqn2bggagq5"]
 
 [ext_resource type="PackedScene" uid="uid://dqr8mufb1x01h" path="res://placeholder_body_3D.tscn" id="1_ld1lu"]
 [ext_resource type="PackedScene" uid="uid://d1rov10qxxffg" path="res://LevelAssets/Default_BGFloor.glb" id="3_5l7bu"]
 [ext_resource type="PackedScene" uid="uid://gvq4c3q3vg6g" path="res://character_spawner_3d.tscn" id="4_7jd3q"]
 [ext_resource type="PackedScene" uid="uid://d0r6ijqlpc7d1" path="res://gameplay.tscn" id="4_b0oa5"]
-[ext_resource type="PackedScene" uid="uid://br10cjqeshng8" path="res://LevelBlocks/level_block_01.tscn" id="5_72y60"]
+[ext_resource type="PackedScene" uid="uid://bvc0yddh1rhhk" path="res://LevelBlocks/level_block_01.tscn" id="5_72y60"]
 [ext_resource type="PackedScene" uid="uid://cedg308wgybcl" path="res://lava.tscn" id="5_rka6h"]
-[ext_resource type="PackedScene" uid="uid://bruqktkesenmx" path="res://LevelBlocks/level_block_02.tscn" id="6_3d6le"]
-[ext_resource type="PackedScene" path="res://level_generator.tscn" id="6_p5q7d"]
-[ext_resource type="PackedScene" path="res://LevelBlocks/level_block_03.tscn" id="7_mvyo5"]
-[ext_resource type="PackedScene" path="res://LevelBlocks/level_block_04.tscn" id="8_nefas"]
-[ext_resource type="PackedScene" path="res://LevelBlocks/level_block_05.tscn" id="9_x7udl"]
+[ext_resource type="PackedScene" uid="uid://dtusq2j5x12f1" path="res://LevelBlocks/level_block_02.tscn" id="6_3d6le"]
+[ext_resource type="PackedScene" uid="uid://bgdfl1j27rxvo" path="res://level_generator.tscn" id="6_p5q7d"]
+[ext_resource type="PackedScene" uid="uid://rndqmghkd7r8" path="res://LevelBlocks/level_block_03.tscn" id="7_mvyo5"]
+[ext_resource type="PackedScene" uid="uid://b6k57d8hpdkcr" path="res://LevelBlocks/level_block_04.tscn" id="8_nefas"]
+[ext_resource type="PackedScene" uid="uid://by7uv7daaqga2" path="res://LevelBlocks/level_block_05.tscn" id="9_x7udl"]
+[ext_resource type="PackedScene" uid="uid://c42now4mo6d6r" path="res://LevelBlocks/level_block_06.tscn" id="10_2nype"]
+[ext_resource type="PackedScene" uid="uid://dorad6mh8xltt" path="res://LevelBlocks/level_block_07.tscn" id="11_4j2hs"]
 
 [sub_resource type="Environment" id="Environment_0cho6"]
 sdfgi_enabled = true
@@ -49,7 +51,7 @@ transform = Transform3D(14, 0, 0, 0, 1, 0, 0, 0, 3.08, 2.08165e-12, 0.539077, 2.
 transform = Transform3D(-1.61732e-08, 0, 0.082, 0, 1.141, 0, -0.37, 0, -3.58433e-09, 0, 0.499053, 0.391742)
 
 [node name="LevelGenerator" parent="World" instance=ExtResource("6_p5q7d")]
-spawer_entries = Array[PackedScene]([ExtResource("5_72y60"), ExtResource("6_3d6le"), ExtResource("7_mvyo5"), ExtResource("8_nefas"), ExtResource("9_x7udl")])
+spawer_entries = Array[PackedScene]([ExtResource("5_72y60"), ExtResource("6_3d6le"), ExtResource("7_mvyo5"), ExtResource("8_nefas"), ExtResource("9_x7udl"), ExtResource("10_2nype"), ExtResource("11_4j2hs")])
 
 [node name="Gameplay" parent="World" node_paths=PackedStringArray("world", "level_generator") instance=ExtResource("4_b0oa5")]
 world = NodePath("..")
