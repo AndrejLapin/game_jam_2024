@@ -13,7 +13,7 @@ bones/2/rotation = Quaternion(-0.532821, -0.0113676, -0.00419, 0.846141)
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
 
 [node name="BoneAttachment3D" type="BoneAttachment3D" parent="Char_Frog/Skeleton3D" index="1"]
-transform = Transform3D(0.999706, 0.0192045, -0.0147722, 0.00502315, 0.432168, 0.901779, 0.0237023, -0.901589, 0.431945, 0.179537, -0.0655921, 0.487777)
+transform = Transform3D(0.999706, 0.0192045, -0.0147722, 0.00502313, 0.432168, 0.901779, 0.0237022, -0.901588, 0.431945, 0.179537, -0.0655921, 0.487777)
 bone_name = "Bone.002"
 bone_idx = 2
 
