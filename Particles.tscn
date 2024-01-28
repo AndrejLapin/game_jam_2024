@@ -1,10 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bcq6sba1c0je1"]
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_suhhk"]
-radius = 0.035
-height = 0.075
-radial_segments = 4
-rings = 1
+[sub_resource type="QuadMesh" id="QuadMesh_luyuv"]
 
 [node name="Particles" type="Node3D"]
 
@@ -12,7 +8,7 @@ rings = 1
 amount = 3
 lifetime = 1.86
 preprocess = 1.14
-mesh = SubResource("CapsuleMesh_suhhk")
+mesh = SubResource("QuadMesh_luyuv")
 emission_colors = PackedColorArray(0.976471, 0.239216, 0.0117647, 1)
 direction = Vector3(0, 1, 0)
 spread = 12.27

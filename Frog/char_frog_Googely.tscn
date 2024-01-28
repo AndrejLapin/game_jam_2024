@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddv2jxpwway61"]
+
+[ext_resource type="PackedScene" uid="uid://bi7pmemvnv72k" path="res://Frog/Char_Frog.glb" id="1_1gu4a"]
+[ext_resource type="PackedScene" uid="uid://io2mq6obev34" path="res://eye_node.tscn" id="2_gyn7j"]
+
+[node name="Char_Frog2" instance=ExtResource("1_1gu4a")]
+
+[node name="Skeleton3D" parent="Char_Frog" index="0"]
+bones/1/position = Vector3(0.179537, -0.065592, 0.487777)
+bones/2/rotation = Quaternion(-0.532821, -0.0113676, -0.00419, 0.846141)
+
+[node name="Frog" parent="Char_Frog/Skeleton3D" index="0"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="BoneAttachment3D" type="BoneAttachment3D" parent="Char_Frog/Skeleton3D" index="1"]
+transform = Transform3D(0.999706, 0.0192045, -0.0147722, 0.00502315, 0.432168, 0.901779, 0.0237023, -0.901589, 0.431945, 0.179537, -0.0655921, 0.487777)
+bone_name = "Bone.002"
+bone_idx = 2
+
+[node name="EyeNode" parent="Char_Frog/Skeleton3D/BoneAttachment3D" index="0" instance=ExtResource("2_gyn7j")]
+transform = Transform3D(0.999707, 0.00502315, 0.0237023, 0.0192045, 0.432168, -0.901589, -0.0147722, 0.901779, 0.431945, 0.275129, 0.335366, 0.502959)
+
+[node name="EyeNode2" parent="Char_Frog/Skeleton3D/BoneAttachment3D" index="1" instance=ExtResource("2_gyn7j")]
+transform = Transform3D(0.999707, 0.00502315, 0.0237023, 0.0192045, 0.432168, -0.901589, -0.0147722, 0.901779, 0.431945, -0.628617, 0.318004, 0.516313)

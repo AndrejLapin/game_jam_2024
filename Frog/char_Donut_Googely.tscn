@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cyiosivprypsn"]
+
+[ext_resource type="PackedScene" uid="uid://du30gva1t1gov" path="res://Frog/Char_Dounut.glb" id="1_dyrxt"]
+
+[node name="Char_Dounut" instance=ExtResource("1_dyrxt")]
