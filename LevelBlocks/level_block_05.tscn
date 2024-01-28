@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cfcpcmgsc7x5v" path="res://LevelBlocks/level_background.tscn" id="2_koimt"]
 [ext_resource type="PackedScene" uid="uid://bxwetj3bxdr23" path="res://LevelAssets/Platform.tscn" id="3_ienex"]
 
-[node name="LevelBlock" type="Node3D"]
+[node name="LevelBlock2" type="Node3D"]
 script = ExtResource("1_2acin")
 
 [node name="LevelBlock" parent="." instance=ExtResource("2_koimt")]

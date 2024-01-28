@@ -6,22 +6,22 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_uahir"]
 size = Vector3(0.90918, 3.83878, 2.56497)
 
-[node name="LevelBlock" type="Node3D"]
+[node name="LevelBlock3" type="Node3D"]
 script = ExtResource("1_0xnos")
 SPAWN_WEIGHT = 0.5
 
 [node name="Default_BG" parent="." instance=ExtResource("2_wqrp5")]
-transform = Transform3D(-4.28372e-08, -2.19736e-16, -0.98, 3.41811e-16, 0.63, -3.41811e-16, 0.98, -2.19736e-16, -4.28372e-08, 0, 0, 0)
+transform = Transform3D(-4.28372e-08, -2.19736e-16, -0.7, 3.41811e-16, 0.63, -2.44151e-16, 0.98, -2.19736e-16, -3.0598e-08, 0, 0, 0)
 
 [node name="Left" type="StaticBody3D" parent="."]
-transform = Transform3D(0.98, 0, 0, 0, 0.6, 0, 0, 0, 0.98, -7.12543, 1.074, 0)
+transform = Transform3D(0.98, 0, 0, 0, 0.6, 0, 0, 0, 0.98, -5.2951, 1.074, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Left"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0454102, -0.119614, 0.177597)
 shape = SubResource("BoxShape3D_uahir")
 
 [node name="Right" type="StaticBody3D" parent="."]
-transform = Transform3D(0.98, 0, 0, 0, 0.6, 0, 0, 0, 0.98, 7.21987, 1.088, 0)
+transform = Transform3D(0.98, 0, 0, 0, 0.6, 0, 0, 0, 0.98, 5.41619, 1.088, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Right"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0454102, -0.119614, 0.177597)

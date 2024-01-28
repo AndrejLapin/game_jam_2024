@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://blkv56c0btfe5" path="res://LevelAssets/Rotating_Platform.tscn" id="3_3qa0p"]
 [ext_resource type="PackedScene" uid="uid://bxwetj3bxdr23" path="res://LevelAssets/Platform.tscn" id="4_6ujpv"]
 
-[node name="LevelBlock" type="Node3D"]
+[node name="LevelBlock2" type="Node3D"]
 script = ExtResource("1_vdmms")
 SPAWN_WEIGHT = 0.5
 
