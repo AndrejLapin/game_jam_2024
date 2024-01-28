@@ -9,7 +9,7 @@ var rng = RandomNumberGenerator.new()
 var spawn_weight_total = 0.0
 var spawn_dictionary: Array[Dictionary]
 var current_height = 0.0
-
+var previous_block
 @onready var parent: Node3D = get_parent()
 
 # Called when the node enters the scene tree for the first time.
@@ -31,6 +31,7 @@ func _ready():
 		})
 		level_block.queue_free()
 	generate_default_segment()
+	previous_block = -1
 	generate_new_segments(9)
 
 
@@ -72,12 +73,16 @@ func generate_single_segment():
 		var entry = spawn_dictionary[index]
 		random_number -= entry.weight
 		if random_number <= 0:
-			var level_block: Node3D = entry.character.instantiate()
-			level_block.position.y = current_height
-			current_height += entry.height
-			add_child(level_block)
-			#characterTemp.position.x = random_position
-			#characterTemp.position.y = position.y
-			#parent.add_child(characterTemp)
-			return
+			if index == previous_block:
+				generate_single_segment()
+			else:
+				previous_block = index
+				var level_block: Node3D = entry.character.instantiate()
+				level_block.position.y = current_height
+				current_height += entry.height
+				add_child(level_block)
+				#characterTemp.position.x = random_position
+				#characterTemp.position.y = position.y
+				#parent.add_child(characterTemp)
+				return
 		index += 1
