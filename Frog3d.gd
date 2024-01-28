@@ -4,7 +4,7 @@ extends RigidBody3D
 
 const AREAL_STRAFE = 4.0
 const MOVESPEED = 2.0
-const JUMP_VELOCITY = 10.0
+const JUMP_VELOCITY = 14.0
 const MAX_HOLD_JUMP = 0.6
 const SPAWN_WEIGHT = 1.1
 

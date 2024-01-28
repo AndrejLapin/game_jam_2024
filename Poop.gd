@@ -1,7 +1,7 @@
 extends RigidBody3D
 
 const MOVESPEED = 5
-const JUMP_VELOCITY = 8
+const JUMP_VELOCITY = 10
 
 
 # Called when the node enters the scene tree for the first time.

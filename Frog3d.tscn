@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://caoyb2ucq4r4w"]
+[gd_scene load_steps=7 format=3 uid="uid://caoyb2ucq4r4w"]
 
 [ext_resource type="Script" path="res://Frog3d.gd" id="1_6atwt"]
-[ext_resource type="PackedScene" uid="uid://ddv2jxpwway61" path="res://Frog/char_frog_Googely.tscn" id="3_8rot0"]
 [ext_resource type="PackedScene" uid="uid://dqocrbkse845l" path="res://lava_handler.tscn" id="3_872j6"]
+[ext_resource type="PackedScene" uid="uid://bi7pmemvnv72k" path="res://Frog/Char_Frog.glb" id="3_qqq3l"]
+[ext_resource type="PackedScene" uid="uid://io2mq6obev34" path="res://eye_node.tscn" id="4_r6pd1"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_mhx5t"]
 bounce = 0.3
@@ -24,5 +25,11 @@ target_position = Vector3(2.08165e-12, -0.22, 2.08165e-12)
 
 [node name="LavaHandler" parent="." instance=ExtResource("3_872j6")]
 
-[node name="Char_Frog3" parent="." instance=ExtResource("3_8rot0")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.00520273, -0.0327082, -0.0268234)
+[node name="Char_Frog3" parent="." instance=ExtResource("3_qqq3l")]
+transform = Transform3D(-1.09278e-08, 0, -0.25, 0, 0.25, 0, 0.25, 0, -1.09278e-08, 0, 0, 0)
+
+[node name="EyeNode" parent="." instance=ExtResource("4_r6pd1")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.124133, 0.130471, 0.0862528)
+
+[node name="EyeNode2" parent="." instance=ExtResource("4_r6pd1")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.129662, 0.130471, 0.0862528)
