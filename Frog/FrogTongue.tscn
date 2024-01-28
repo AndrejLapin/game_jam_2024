@@ -1,23 +1,41 @@
-[gd_scene load_steps=4 format=3 uid="uid://dt1t1mptccy03"]
+[gd_scene load_steps=6 format=3 uid="uid://dt1t1mptccy03"]
+
+[ext_resource type="Script" path="res://Frog/FrogTongue.gd" id="1_04udi"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ex1et"]
 albedo_color = Color(0.984314, 0.819608, 0.811765, 1)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_a2bqa"]
 material = SubResource("StandardMaterial3D_ex1et")
-height = 1.27
+height = 1.25
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_owtns"]
-height = 1.29556
+height = 0.1
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_6jsb2"]
+height = 1.25
 
 [node name="FrogTongue" type="Node3D"]
 transform = Transform3D(1, -3.48787e-16, 3.48787e-16, 3.48787e-16, 1, -3.48787e-16, -3.48787e-16, 3.48787e-16, 1, 0, 0, 0)
+script = ExtResource("1_04udi")
 
 [node name="Tongue" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.04, 0, 0, 0, 0.04, 0, 0, 0, 0.04, 0, 0.0256345, 0)
+transform = Transform3D(0.04, -4.86609e-33, 3.1184e-25, 3.1184e-25, 0.04, -3.1184e-25, 0, 0, 0.04, 2.08165e-12, 0.025, 2.08165e-12)
 mesh = SubResource("CylinderMesh_a2bqa")
 
-[node name="Area3D" type="Area3D" parent="Tongue"]
+[node name="TipPosition" type="Node3D" parent="Tongue"]
+transform = Transform3D(1, -5.29396e-23, 4.16773e-23, 4.16773e-23, 1, -4.16773e-23, -5.29396e-23, 5.29396e-23, 1, 2.08165e-12, 0.625, 2.08165e-12)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Tongue/Area3D"]
+[node name="TongueTip" type="Area3D" parent="Tongue"]
+transform = Transform3D(1, -1.35658e-22, 1.21087e-22, 1.21087e-22, 1, -1.21087e-22, -1.35658e-22, 1.35658e-22, 1, -2.42861e-17, -0.0737684, 2.42861e-17)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tongue/TongueTip"]
+transform = Transform3D(1, -1.8198e-23, 1.4438e-22, 1.4438e-22, 1, -1.4438e-22, -1.8198e-23, 1.8198e-23, 1, 2.08165e-12, 0.639665, 2.08164e-12)
 shape = SubResource("CylinderShape3D_owtns")
+
+[node name="TongueBody" type="Area3D" parent="Tongue"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Tongue/TongueBody"]
+shape = SubResource("CylinderShape3D_6jsb2")
+
+[connection signal="body_entered" from="Tongue/TongueTip" to="." method="_on_area_3d_body_entered"]

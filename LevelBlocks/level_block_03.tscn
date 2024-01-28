@@ -1,8 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://rndqmghkd7r8"]
+[gd_scene load_steps=5 format=3 uid="uid://uplatavyh6nj"]
 
 [ext_resource type="Script" path="res://LevelBlocks/default_level_block.gd" id="1_da5kb"]
 [ext_resource type="PackedScene" uid="uid://8m0dd6u3ibk3" path="res://LevelAssets/Default_BG.glb" id="2_cu2oh"]
-[ext_resource type="PackedScene" uid="uid://bxwetj3bxdr23" path="res://LevelAssets/Platform.tscn" id="3_qu3h6"]
+[ext_resource type="PackedScene" path="res://LevelAssets/Platform.tscn" id="3_qu3h6"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_uahir"]
 size = Vector3(0.90918, 3.83878, 2.56497)

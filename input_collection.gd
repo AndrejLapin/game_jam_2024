@@ -31,10 +31,7 @@ func _physics_process(delta):
 	horizontal_direction = Input.get_axis("move_left", "move_right")
 	vertical_direction = Input.get_axis("move_up", "move_down")
 	
-	if Input.is_action_just_pressed("mouse_click"):
-		mouse_just_pressed = true
-	elif Input.is_action_just_released("mouse_click"):
-		mouse_just_pressed = false
+	mouse_just_pressed = Input.is_action_just_pressed("mouse_click")
 		
 	mouse_position.x = backgroundClick.mouse_position.x
 	mouse_position.y = backgroundClick.mouse_position.y

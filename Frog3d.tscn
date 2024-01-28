@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://caoyb2ucq4r4w"]
+[gd_scene load_steps=7 format=3 uid="uid://caoyb2ucq4r4w"]
 
 [ext_resource type="Script" path="res://Frog3d.gd" id="1_6atwt"]
+[ext_resource type="PackedScene" uid="uid://dt1t1mptccy03" path="res://Frog/FrogTongue.tscn" id="2_5bvdh"]
 [ext_resource type="PackedScene" uid="uid://dwxgjsgl675tw" path="res://Frog/Frog_Char.glb" id="2_bylw7"]
 [ext_resource type="PackedScene" uid="uid://dqocrbkse845l" path="res://lava_handler.tscn" id="3_872j6"]
 
@@ -14,6 +15,7 @@ height = 1.80555
 [node name="Frog3d" type="RigidBody3D"]
 physics_material_override = SubResource("PhysicsMaterial_mhx5t")
 script = ExtResource("1_6atwt")
+tongue_mesh = ExtResource("2_5bvdh")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(-1.09278e-08, -0.25, 8.71967e-17, 0.25, -1.09278e-08, -8.71967e-17, 8.71967e-17, 8.71967e-17, 0.25, 0, 0, 0)
@@ -26,3 +28,15 @@ transform = Transform3D(-1.09278e-08, -8.71967e-17, -0.25, 8.71967e-17, 0.25, -8
 target_position = Vector3(2.08165e-12, -0.22, 2.08165e-12)
 
 [node name="LavaHandler" parent="." instance=ExtResource("3_872j6")]
+
+[node name="TongueArm" type="Node3D" parent="."]
+
+[node name="TongueParent" type="Node3D" parent="TongueArm"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.167579, 0)
+
+[node name="TongueRayCast" type="Node3D" parent="."]
+transform = Transform3D(1, -3.48787e-16, 3.48787e-16, 3.48787e-16, 1, -3.48787e-16, -3.48787e-16, 3.48787e-16, 1, 0, 0, 0)
+
+[node name="RayCast01" type="RayCast3D" parent="TongueRayCast"]
+transform = Transform3D(1, -3.48787e-16, 3.48787e-16, 3.48787e-16, 1, -3.48787e-16, -3.48787e-16, 3.48787e-16, 1, 2.08165e-12, 0.247, 2.08165e-12)
+target_position = Vector3(2.08165e-12, 100, 2.08165e-12)
