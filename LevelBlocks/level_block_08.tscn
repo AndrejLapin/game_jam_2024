@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://mkxpfjwq51e1"]
+
+[ext_resource type="Script" path="res://LevelBlocks/default_level_block.gd" id="1_7xren"]
+[ext_resource type="PackedScene" uid="uid://cfcpcmgsc7x5v" path="res://LevelBlocks/level_background.tscn" id="2_ugbxj"]
+[ext_resource type="PackedScene" uid="uid://bxwetj3bxdr23" path="res://LevelAssets/Platform.tscn" id="3_hyl13"]
+
+[node name="LevelBlock" type="Node3D"]
+script = ExtResource("1_7xren")
+
+[node name="LevelBlock" parent="." instance=ExtResource("2_ugbxj")]
+
+[node name="Rotatable_Platform4" parent="." instance=ExtResource("3_hyl13")]
+transform = Transform3D(-6.55671e-08, -0.879, 0, 1.5, -3.84223e-08, 0, 0, 0, 0.879, 4.011, 1, 0)
+
+[node name="Rotatable_Platform6" parent="." instance=ExtResource("3_hyl13")]
+transform = Transform3D(-6.55671e-08, -0.879, 0, 1.5, -3.84223e-08, 0, 0, 0, 0.879, -0.028, 1, 0)
+
+[node name="Rotatable_Platform7" parent="." instance=ExtResource("3_hyl13")]
+transform = Transform3D(-6.55671e-08, -0.879, 0, 1.5, -3.84223e-08, 0, 0, 0, 0.879, -3.933, 1, 0)
+
+[node name="Rotatable_Platform5" parent="." instance=ExtResource("3_hyl13")]
+transform = Transform3D(-6.55671e-08, -1, 0, 1.5, -4.37114e-08, 0, 0, 0, 1, 2.441, 1, 0)
+
+[node name="Rotatable_Platform8" parent="." instance=ExtResource("3_hyl13")]
+transform = Transform3D(-6.55671e-08, -1, 0, 1.5, -4.37114e-08, 0, 0, 0, 1, -1.952, 1, 0)
