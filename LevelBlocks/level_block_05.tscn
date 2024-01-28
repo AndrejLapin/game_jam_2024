@@ -4,19 +4,19 @@
 [ext_resource type="PackedScene" uid="uid://cfcpcmgsc7x5v" path="res://LevelBlocks/level_background.tscn" id="2_koimt"]
 [ext_resource type="PackedScene" uid="uid://bxwetj3bxdr23" path="res://LevelAssets/Platform.tscn" id="3_ienex"]
 
-[node name="LevelBlock2" type="Node3D"]
+[node name="LevelBlock" type="Node3D"]
 script = ExtResource("1_2acin")
 
 [node name="LevelBlock" parent="." instance=ExtResource("2_koimt")]
 
 [node name="Rotatable_Platform" parent="." instance=ExtResource("3_ienex")]
-transform = Transform3D(3, 0, 0, 0, 0.841, 0, 0, 0, 0.841, -2.124, 0.9, 0)
+transform = Transform3D(3.82093, 0, 0, 0, 0.841, 0, 0, 0, 0.841, -3.08066, 0.9, 0)
 
 [node name="Rotatable_Platform4" parent="." instance=ExtResource("3_ienex")]
-transform = Transform3D(3, 0, 0, 0, 0.879, 0, 0, 0, 0.879, 2.797, 0.9, 0)
+transform = Transform3D(3.82247, 0, 0, 0, 0.879, 0, 0, 0, 0.879, 3.08981, 0.9, 0)
 
 [node name="Rotatable_Platform3" parent="." instance=ExtResource("3_ienex")]
-transform = Transform3D(1.01551, 0, 0, 0, 1, 0, 0, 0, 1, -6.23293, 0.856553, 0)
+transform = Transform3D(0.418228, 0, 0, 0, 1, 0, 0, 0, 1, -1.58064, 1.20765, 0)
 
-[node name="Rotatable_Platform6" parent="." instance=ExtResource("3_ienex")]
-transform = Transform3D(2.06453, 0, 0, 0, 1, 0, 0, 0, 1, 5.524, 1.95221, 0)
+[node name="Rotatable_Platform5" parent="." instance=ExtResource("3_ienex")]
+transform = Transform3D(0.418228, 0, 0, 0, 1, 0, 0, 0, 1, 1.5701, 1.20765, 0)

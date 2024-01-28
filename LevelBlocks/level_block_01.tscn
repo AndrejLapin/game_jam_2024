@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://blkv56c0btfe5" path="res://LevelAssets/Rotating_Platform.tscn" id="3_3qa0p"]
 [ext_resource type="PackedScene" uid="uid://bxwetj3bxdr23" path="res://LevelAssets/Platform.tscn" id="4_6ujpv"]
 
-[node name="LevelBlock2" type="Node3D"]
+[node name="LevelBlock" type="Node3D"]
 script = ExtResource("1_vdmms")
 SPAWN_WEIGHT = 0.5
 
@@ -19,6 +19,3 @@ transform = Transform3D(0.98, 0, 0, 0, 0.6, 0, 0, 0, 0.98, 1.758, 1, 0)
 
 [node name="Rotatable_Platform" parent="." instance=ExtResource("4_6ujpv")]
 transform = Transform3D(1.12253, 0, 0, 0, 1, 0, 0, 0, 1, 6.16988, 0.199594, 0)
-
-[node name="Rotatable_Platform2" parent="." instance=ExtResource("4_6ujpv")]
-transform = Transform3D(2.0027, 0, 0, 0, 1.01235, 0, 0, 0, 1.01235, -5.55241, 0.199594, 0)
