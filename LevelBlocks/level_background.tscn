@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfcpcmgsc7x5v"]
+
+[ext_resource type="Script" path="res://LevelBlocks/default_level_block.gd" id="1_0xnos"]
+[ext_resource type="PackedScene" uid="uid://8m0dd6u3ibk3" path="res://LevelAssets/Default_BG.glb" id="2_wqrp5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uahir"]
+size = Vector3(0.90918, 3.83878, 2.56497)
+
+[node name="LevelBlock" type="Node3D"]
+script = ExtResource("1_0xnos")
+SPAWN_WEIGHT = 0.5
+
+[node name="Default_BG" parent="." instance=ExtResource("2_wqrp5")]
+transform = Transform3D(-4.28372e-08, -2.09272e-16, -0.98, 3.41811e-16, 0.6, -3.41811e-16, 0.98, -2.09272e-16, -4.28372e-08, 0, 0, 0)
+
+[node name="Left" type="StaticBody3D" parent="."]
+transform = Transform3D(0.98, 0, 0, 0, 0.6, 0, 0, 0, 0.98, -7.12543, 1.074, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Left"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0454102, -0.119614, 0.177597)
+shape = SubResource("BoxShape3D_uahir")
+
+[node name="Right" type="StaticBody3D" parent="."]
+transform = Transform3D(0.98, 0, 0, 0, 0.6, 0, 0, 0, 0.98, 7.21987, 1.088, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Right"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0454102, -0.119614, 0.177597)
+shape = SubResource("BoxShape3D_uahir")

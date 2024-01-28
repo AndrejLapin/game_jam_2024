@@ -1,21 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://rndqmghkd7r8"]
+[gd_scene load_steps=5 format=3 uid="uid://rndqmghkd7r8"]
 
 [ext_resource type="Script" path="res://LevelBlocks/default_level_block.gd" id="1_da5kb"]
 [ext_resource type="PackedScene" uid="uid://yds7aje3feup" path="res://LevelAssets/Deco_Pipe_003.glb" id="2_52idr"]
-[ext_resource type="PackedScene" uid="uid://8m0dd6u3ibk3" path="res://LevelAssets/Default_BG.glb" id="2_cu2oh"]
 [ext_resource type="PackedScene" uid="uid://bxwetj3bxdr23" path="res://LevelAssets/Platform.tscn" id="3_qu3h6"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_uahir"]
-size = Vector3(0.90918, 3.83878, 2.56497)
+[ext_resource type="PackedScene" uid="uid://cfcpcmgsc7x5v" path="res://LevelBlocks/level_background.tscn" id="4_fi146"]
 
 [node name="LevelBlock" type="Node3D"]
 script = ExtResource("1_da5kb")
 
 [node name="Deco_Pipe_0032" parent="." instance=ExtResource("2_52idr")]
 transform = Transform3D(3.02396e-09, 0, -0.253584, 0, 0.253584, 0, 0.253584, 0, 3.02396e-09, 0.947513, 1.29772, -0.544251)
-
-[node name="Default_BG" parent="." instance=ExtResource("2_cu2oh")]
-transform = Transform3D(-4.28372e-08, -2.09272e-16, -0.98, 3.41811e-16, 0.6, -3.41811e-16, 0.98, -2.09272e-16, -4.28372e-08, 0, 0, 0)
 
 [node name="Rotatable_Platform" parent="." instance=ExtResource("3_qu3h6")]
 transform = Transform3D(2.37406, 0, 0, 0, 1, 0, 0, 0, 1, 5.42758, 0.129026, 0)
@@ -35,16 +29,4 @@ transform = Transform3D(1.46965, 0, 0, 0, 1, 0, 0, 0, 1, 0.921368, 0.775751, 0)
 [node name="Rotatable_Platform3" parent="." instance=ExtResource("3_qu3h6")]
 transform = Transform3D(1.01551, 0, 0, 0, 1, 0, 0, 0, 1, 6.24503, 0.856553, 0)
 
-[node name="Left" type="StaticBody3D" parent="."]
-transform = Transform3D(0.98, 0, 0, 0, 0.6, 0, 0, 0, 0.98, -7.28303, 1.07406, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Left"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0454102, -0.119614, 0.177597)
-shape = SubResource("BoxShape3D_uahir")
-
-[node name="Right" type="StaticBody3D" parent="."]
-transform = Transform3D(0.98, 0, 0, 0, 0.6, 0, 0, 0, 0.98, 7.369, 1.08829, 2.08165e-12)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Right"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0454102, -0.119614, 0.177597)
-shape = SubResource("BoxShape3D_uahir")
+[node name="LevelBlock" parent="." instance=ExtResource("4_fi146")]
