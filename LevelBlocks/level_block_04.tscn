@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://LevelBlocks/default_level_block.gd" id="1_cfu1b"]
 [ext_resource type="PackedScene" uid="uid://cym766ppkctgy" path="res://LevelBlocks/default_level_block.tscn" id="2_yybwo"]
-[ext_resource type="PackedScene" uid="uid://bxwetj3bxdr23" path="res://LevelAssets/Platform.tscn" id="3_8u30h"]
+[ext_resource type="PackedScene" path="res://LevelAssets/Platform.tscn" id="3_8u30h"]
 
-[node name="LevelBlock" type="Node3D"]
+[node name="LevelBlock2" type="Node3D"]
 script = ExtResource("1_cfu1b")
 SPAWN_WEIGHT = 0.7
 

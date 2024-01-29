@@ -3,6 +3,7 @@ class_name CharacterSpawner extends Node3D
 
 const SPAWN_INTERVAL_PLACEHOLDER = 5.0
 
+@export var world: Node3D
 @export var spawer_entries: Array[PackedScene]
 
 var rng = RandomNumberGenerator.new()
@@ -11,11 +12,13 @@ var spawn_weight_total = 0.0
 var spawn_dictionary: Array[Dictionary]
 
 @onready var half_length: float = (get_node("Area3D/CollisionShape3D").shape.size.x / 2)
-@onready var character_group = get_node("CharacterGroup")
+var character_group: Node3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	character_group.set_as_top_level(true)
+	character_group = Node3D.new()
+	character_group.name = "CharacterGroup"
+	world.add_child(character_group)
 	# calculate total weights
 	for entry in spawer_entries:
 		var spawn_weight = 1.0

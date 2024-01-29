@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://dklqn2bggagq5"]
 
-[ext_resource type="PackedScene" uid="uid://dqr8mufb1x01h" path="res://placeholder_body_3D.tscn" id="1_ld1lu"]
+[ext_resource type="PackedScene" uid="uid://da3lrkegw163m" path="res://placeholder_body_3D.tscn" id="1_ld1lu"]
 [ext_resource type="PackedScene" uid="uid://d1rov10qxxffg" path="res://LevelAssets/Default_BGFloor.glb" id="3_5l7bu"]
 [ext_resource type="PackedScene" uid="uid://gvq4c3q3vg6g" path="res://character_spawner_3d.tscn" id="4_7jd3q"]
 [ext_resource type="PackedScene" uid="uid://d0r6ijqlpc7d1" path="res://gameplay.tscn" id="4_b0oa5"]
@@ -40,10 +40,11 @@ light_color = Color(0.14902, 0.552941, 0.933333, 1)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1.21673, 4.862)
 current = true
 
-[node name="World" type="Node3D" parent="."]
+[node name="CharacterSpawner3D" parent="." node_paths=PackedStringArray("world") instance=ExtResource("4_7jd3q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.5877, 0)
+world = NodePath("../World")
 
-[node name="CharacterSpawner3D" parent="World" instance=ExtResource("4_7jd3q")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.30873, 0)
+[node name="World" type="Node3D" parent="."]
 
 [node name="Floor" parent="World" instance=ExtResource("1_ld1lu")]
 transform = Transform3D(14, 0, 0, 0, 1, 0, 0, 0, 3.08, 2.08165e-12, 0.539077, 2.08165e-12)
@@ -54,9 +55,10 @@ transform = Transform3D(-1.61732e-08, 0, 0.082, 0, 1.141, 0, -0.37, 0, -3.58433e
 [node name="LevelGenerator" parent="World" instance=ExtResource("6_p5q7d")]
 spawer_entries = Array[PackedScene]([ExtResource("5_72y60"), ExtResource("6_3d6le"), ExtResource("7_mvyo5"), ExtResource("8_nefas"), ExtResource("9_x7udl"), ExtResource("10_2nype"), ExtResource("11_4j2hs"), ExtResource("12_p8b5d")])
 
-[node name="Gameplay" parent="World" node_paths=PackedStringArray("world", "level_generator") instance=ExtResource("4_b0oa5")]
+[node name="Gameplay" parent="World" node_paths=PackedStringArray("world", "level_generator", "character_spawner") instance=ExtResource("4_b0oa5")]
 world = NodePath("..")
 level_generator = NodePath("../LevelGenerator")
+character_spawner = NodePath("../../CharacterSpawner3D")
 initial_speed = 0.01
 speed_up = 0.01
 

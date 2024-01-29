@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://LevelBlocks/default_level_block.gd" id="1_da5kb"]
 [ext_resource type="PackedScene" uid="uid://yds7aje3feup" path="res://LevelAssets/Deco_Pipe_003.glb" id="2_52idr"]
-[ext_resource type="PackedScene" uid="uid://bxwetj3bxdr23" path="res://LevelAssets/Platform.tscn" id="3_qu3h6"]
+[ext_resource type="PackedScene" path="res://LevelAssets/Platform.tscn" id="3_qu3h6"]
 [ext_resource type="PackedScene" uid="uid://cfcpcmgsc7x5v" path="res://LevelBlocks/level_background.tscn" id="4_fi146"]
 
-[node name="LevelBlock" type="Node3D"]
+[node name="LevelBlock2" type="Node3D"]
 script = ExtResource("1_da5kb")
 
 [node name="Deco_Pipe_0032" parent="." instance=ExtResource("2_52idr")]
